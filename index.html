@@ -852,7 +852,7 @@ input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;bac
         </div>
         <div class="card-c reveal">
           <h3>Tell us about your event</h3>
-          <p class="role">We’ll prepare your enquiry to send by email</p>
+          <p class="role">Your enquiry opens in WhatsApp, ready to send</p>
           <form id="form" novalidate>
             <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required><span class="err" id="e-name"></span></div>
             <div class="field"><label for="f-mail">Email or phone</label><input id="f-mail" name="contact" autocomplete="email" required><span class="err" id="e-mail"></span></div>
@@ -863,11 +863,11 @@ input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;bac
             <div class="field"><label for="f-date">Preferred date</label><input id="f-date" name="date" type="date"></div>
             <div class="field"><label for="f-guests">Expected guests</label><input id="f-guests" name="guests" inputmode="numeric" placeholder="e.g. 250"></div>
             <div class="field field--full"><label for="f-msg">Your vision</label><textarea id="f-msg" name="msg" placeholder="Tell us about the occasion, the feeling you want, and anything already decided."></textarea></div>
-            <div class="field--full"><button class="btn btn--solid" type="submit">Prepare my enquiry</button></div>
+            <div class="field--full"><button class="btn btn--solid" type="submit">Send on WhatsApp</button></div>
             <div class="out" id="out" hidden>
-              <strong style="color:var(--slate-ink)">Your enquiry is ready. Copy it and send it to ibrahim@theseventhcloud.com.</strong>
+              <strong style="color:var(--slate-ink)">WhatsApp should now be open with your enquiry. If it didn’t open, use the button below.</strong>
               <pre id="outText"></pre>
-              <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="copy" type="button" id="copyOut">Copy enquiry</button><button class="copy" type="button" data-copy="ibrahim@theseventhcloud.com">Copy email address</button></div>
+              <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="copy" id="waOut" href="#" target="_blank" rel="noopener">Open WhatsApp</a><button class="copy" type="button" id="copyOut">Copy enquiry</button></div>
             </div>
           </form>
         </div>
@@ -1053,13 +1053,14 @@ seal.addEventListener('pointerup',()=>{drag=false;seal.style.cursor='grab'});
 (function spin(){if(!drag){ang+=vel;vel+= ((reduce?0:.08)-vel)*.02}simg.style.transform=`rotate(${ang}deg)`;requestAnimationFrame(spin)})();
 
 /* ---------- form ---------- */
+const WA={'Jordan':'962790697080','Lebanon':'962790697080','Saudi Arabia':'966566888450','UAE':'971544551313'};
 $('#form').addEventListener('submit',e=>{e.preventDefault();const f=e.target;let ok=true;
   const n=f.name.value.trim(),c=f.contact.value.trim();
   $('#e-name').textContent=n?'':'Add your name so we know who to reply to.';
   $('#e-mail').textContent=c?'':'Add an email address or phone number so we can reach you.';
   if(!n||!c){(n?f.contact:f.name).focus();return}
   const txt=`Hello The Seventh Cloud,\n\nMy name is ${n} and I’d like to plan a ${f.type.value} in ${f.country.value}.\n${f.date.value?'Preferred date: '+f.date.value+'\n':''}${f.guests.value?'Expected guests: '+f.guests.value+'\n':''}${f.msg.value.trim()?'\n'+f.msg.value.trim()+'\n':''}\nYou can reach me at ${c}.\n\nThank you`;
-  $('#outText').textContent=txt;$('#out').hidden=false;$('#out').scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'})});
+  const wa='https://wa.me/'+(WA[f.country.value]||WA.Jordan)+'?text='+encodeURIComponent(txt);$('#waOut').href=wa;window.open(wa,'_blank','noopener');$('#outText').textContent=txt;$('#out').hidden=false;$('#out').scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'})});
 $('#copyOut').onclick=()=>copy($('#outText').textContent);
 
 /* ---------- navigation helper (curtain when motion is on) ---------- */

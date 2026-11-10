@@ -1,0 +1,1256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" type="image/png" href="assets/seal.png">
+<style>html,body{margin:0}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>The Seventh Cloud</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="The Seventh Cloud is a boutique luxury event house delivering weddings, corporate events and large-scale productions across Jordan, Lebanon, Saudi Arabia and the UAE.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Mulish:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: a drift through the catalog's skies — sky-blue and blush bands alternate like its pages,
+   with a cream footer strip, flared small-caps headings and soft cloud motion. */
+:root{
+  /* catalog palette */
+  --sky:#CCDDED; --blush:#EECAD4; --cream:#F8F5E6; --sand:#C1A892;
+  --slate:#7B93AC; --rose:#B98D8E;
+  /* deeper shades of the same hues, for readable body text */
+  --slate-ink:#4D6582; --rose-ink:#7A4E55; --ink:#3B4A5E;
+  --white:#FFFFFF; --sky-soft:#E3ECF6; --blush-soft:#F6E4E9;
+  --line:rgba(123,147,172,.35);
+  --display:"Marcellus SC","Copperplate","Copperplate Gothic Light",Georgia,serif;
+  --body:"Mulish","Segoe UI",system-ui,-apple-system,sans-serif;
+  --step--1:clamp(.8rem,.78rem + .1vw,.875rem);
+  --step-0:clamp(1rem,.96rem + .2vw,1.1rem);
+  --step-1:clamp(1.2rem,1.1rem + .5vw,1.45rem);
+  --step-2:clamp(1.6rem,1.3rem + 1.2vw,2.3rem);
+  --step-3:clamp(2.2rem,1.6rem + 2.6vw,3.8rem);
+  --step-4:clamp(2.8rem,1.8rem + 4.4vw,5.6rem);
+  --ease:cubic-bezier(.22,.7,.2,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font-family:var(--body);font-size:var(--step-0);line-height:1.6;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--cream)}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:.02em}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--slate-ink);outline-offset:3px;border-radius:4px}
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--body);text-transform:uppercase;letter-spacing:.32em;font-size:var(--step--1);font-weight:600}
+.band{position:relative;padding-block:clamp(72px,10vw,140px);overflow:hidden}
+.band--sky{background:var(--sky);color:var(--slate-ink)}
+.band--blush{background:var(--blush);color:var(--rose-ink)}
+.band--cream{background:var(--cream)}
+.band--sky h2{color:var(--slate)} .band--blush h2{color:var(--rose)}
+.band--sky h2{color:#6E87A2} .band--blush h2{color:#A97A80}
+.lead{font-size:var(--step-1);font-weight:300;max-width:34ch}
+.prose{max-width:62ch;font-weight:400}
+.prose strong,.lead strong{font-weight:700}
+.btn{display:inline-flex;align-items:center;gap:.6em;padding:.95em 1.6em;border-radius:999px;font:600 var(--step--1)/1 var(--body);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border:1px solid currentColor;cursor:pointer;transition:background .3s var(--ease),color .3s var(--ease),transform .3s var(--ease),translate .35s var(--ease);background:transparent}
+.btn--solid{background:var(--slate-ink);color:var(--white);border-color:var(--slate-ink)}
+.btn--solid:hover{background:var(--ink)}
+.btn--ghost{color:var(--slate-ink)}
+.btn--ghost:hover{background:var(--slate-ink);color:var(--white)}
+.btn:active{transform:scale(.97)}
+.reveal{will-change:transform}
+
+/* progress + nav */
+.progress{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:2px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--slate),var(--rose));z-index:70}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;transition:background .4s var(--ease),box-shadow .4s var(--ease)}
+.nav::before{content:"";position:absolute;inset:0;z-index:-2;background:rgba(248,245,230,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line);opacity:0;transition:opacity .4s var(--ease)}
+.nav.scrolled::before{opacity:1}
+.nav__in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--slate)}
+.brand img{width:44px;height:44px}
+.brand span{font-family:var(--display);font-size:1.15rem;letter-spacing:.08em;line-height:1}
+.nav__links{display:flex;gap:clamp(14px,2vw,30px);list-style:none;margin:0;padding:0}
+.nav__links a{text-decoration:none;font-size:var(--step--1);letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--slate-ink);position:relative;padding-block:6px}
+.nav__links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
+.nav__links a:hover::after,.nav__links a.active::after{transform:scaleX(1);transform-origin:left}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:999px;width:46px;height:46px;cursor:pointer;color:var(--slate-ink);align-items:center;justify-content:center}
+@media (max-width:900px){
+  .menu-btn{display:inline-flex}
+  .nav__links{position:fixed;inset:0;top:0;flex-direction:column;align-items:center;justify-content:center;gap:28px;background:var(--cream);padding:max(80px,env(safe-area-inset-top,0px)) 20px 40px;transform:translateY(-100%);visibility:hidden;transition:transform .5s var(--ease),visibility 0s linear .5s;z-index:-1}
+  .nav__links a{font-size:1rem}
+  .nav.open .nav__links{transform:none;visibility:visible;transition:transform .5s var(--ease),visibility 0s}
+}
+
+/* hero */
+.hero{position:relative;margin-top:-74px;padding-top:150px;padding-bottom:clamp(140px,18vw,240px);background:var(--sky) url(img/sunsky.webp) center/cover;overflow:hidden;isolation:isolate}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 55% at 50% 42%,rgba(255,255,255,.75),rgba(255,255,255,0) 70%);z-index:-1}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.hero__in{position:relative;z-index:2;text-align:center;display:flex;flex-direction:column;align-items:center;gap:26px}
+.hero__mark{width:min(520px,82vw)}
+.hero__rule{width:min(560px,80vw);height:1px;background:var(--slate);transform-origin:center}
+.hero__tag{color:var(--slate-ink);letter-spacing:.34em}
+.hero__sub{max-width:46ch;color:var(--slate-ink);font-weight:400}
+.hero__cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:6px}
+.cloud{position:absolute;left:-5%;width:110%;height:auto;z-index:1;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 35%);mask-image:linear-gradient(to bottom,transparent,#000 35%)}
+.cloud--a{bottom:-6%;opacity:.95}
+.cloud--b{bottom:-14%;opacity:.7;transform:scaleX(-1)}
+.countries{position:relative;z-index:3;display:flex;justify-content:center;flex-wrap:wrap;gap:10px 28px;margin-top:40px;color:var(--rose-ink);font-weight:600;letter-spacing:.24em;text-transform:uppercase;font-size:var(--step--1)}
+.countries span{display:inline-flex;align-items:center;gap:10px}
+.countries span+span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--rose)}
+
+/* intro */
+.intro{text-align:center;background:var(--blush) url(img/pink_b.webp) center/cover}
+.intro .wrap{display:flex;flex-direction:column;align-items:center;gap:22px}
+.intro h2{font-size:var(--step-4)}
+.intro .eyebrow{color:var(--slate-ink)}
+.intro .prose{font-size:var(--step-1);font-weight:300;color:var(--rose-ink)}
+
+/* who */
+.who__grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,72px);align-items:center}
+.who h2{font-size:var(--step-4);margin-bottom:28px}
+.who__photos{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;perspective:900px}
+.who__photos figure{margin:0;border-radius:6px;overflow:hidden;aspect-ratio:306/443;transition:transform .5s var(--ease),box-shadow .5s var(--ease);box-shadow:0 10px 30px -18px rgba(77,101,130,.6)}
+.who__photos figure:nth-child(even){transform:translateY(28px)}
+.who__photos img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.who__photos figure:hover img{transform:scale(1.06)}
+.who__body{display:flex;flex-direction:column;gap:18px}
+.stats{display:flex;gap:clamp(20px,4vw,48px);margin-top:12px;flex-wrap:wrap}
+.stat b{display:block;font-family:var(--display);font-size:var(--step-3);font-weight:400;color:#6E87A2;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{font-size:var(--step--1);letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+@media (max-width:860px){.who__grid{grid-template-columns:1fr}.who__photos{grid-template-columns:repeat(2,1fr)}}
+
+/* name */
+.name__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,90px);align-items:center}
+.name h2{font-size:var(--step-4);margin-bottom:26px}
+.name__sub{font-size:var(--step-1);margin-bottom:22px}
+.name__art{display:flex;flex-direction:column;align-items:center;gap:30px}
+.name__art .wm{width:min(380px,80%)}
+.seal{width:min(280px,62%);aspect-ratio:1;position:relative;cursor:grab}
+.seal img{width:100%;height:100%;transition:transform .2s linear}
+.seal__hint{font-size:var(--step--1);letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--rose-ink)}
+@media (max-width:860px){.name__grid{grid-template-columns:1fr}}
+
+/* pillars */
+.pillars{background:var(--sky-soft) url(img/sky_b.webp) center/cover;color:var(--slate-ink)}
+.pillars h2{font-size:var(--step-3);color:#6E87A2;margin-bottom:12px}
+.pillars__head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:40px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{border:1px solid var(--line);background:rgba(255,255,255,.55);color:var(--slate-ink);padding:.75em 1.25em;border-radius:999px;font:600 var(--step--1)/1 var(--body);letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:background .3s var(--ease),color .3s var(--ease),border-color .3s}
+.tab:hover{border-color:var(--slate)}
+.tab[aria-selected="true"]{background:var(--slate-ink);color:var(--white);border-color:var(--slate-ink)}
+.panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,70px);align-items:center;background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.8);border-radius:18px;padding:clamp(24px,4vw,52px);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);min-height:360px}
+.panel h3{font-size:var(--step-3);color:#6E87A2;margin-block:10px 22px}
+.panel .eyebrow{color:var(--rose-ink)}
+.panel__img{border-radius:12px;overflow:hidden;aspect-ratio:4/3;background:var(--blush)}
+.panel__img img{width:100%;height:100%;object-fit:cover}
+.panel.swap .panel__txt>*,.panel.swap .panel__img{animation:rise .6s var(--ease) both}
+.panel.swap .panel__txt>*:nth-child(2){animation-delay:.06s}.panel.swap .panel__txt>*:nth-child(3){animation-delay:.12s}
+@keyframes rise{from{transform:translateY(18px);opacity:.3}to{transform:none;opacity:1}}
+@media (max-width:860px){.panel{grid-template-columns:1fr}}
+
+/* services */
+.services__head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end;margin-bottom:48px}
+.services h2{font-size:var(--step-4)}
+.accordion{display:flex;gap:14px;height:min(560px,70vh);min-height:440px}
+.svc{position:relative;flex:1;border-radius:16px;overflow:hidden;cursor:pointer;transition:flex .7s var(--ease);background:var(--ink);color:var(--white);border:0;padding:0;text-align:left;font:inherit}
+.svc.on{flex:3.2}
+.svc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease),opacity .6s}
+.svc:hover img{transform:scale(1.05)}
+.svc::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(59,74,94,.05) 30%,rgba(59,74,94,.85))}
+.svc__txt{position:absolute;left:0;right:0;bottom:0;padding:clamp(18px,2.4vw,32px);z-index:2;display:flex;flex-direction:column;gap:10px}
+.svc__k{font-size:var(--step--1);letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--blush)}
+.svc h3{font-size:var(--step-2);color:var(--white)}
+.svc p{max-width:46ch;font-weight:400;max-height:0;opacity:0;overflow:hidden;transition:max-height .6s var(--ease),opacity .5s}
+.svc.on p{max-height:220px;opacity:1}
+@media (max-width:860px){
+  .services__head{grid-template-columns:1fr}
+  .accordion{flex-direction:column;height:auto;min-height:0}
+  .svc{min-height:120px;flex:none;transition:min-height .6s var(--ease)}
+  .svc.on{min-height:400px;flex:none}
+}
+
+/* process */
+.process{background:var(--blush) url(img/pink_b.webp) center/cover;color:var(--rose-ink)}
+.process h2{font-size:var(--step-4);color:#A97A80;margin-bottom:16px}
+.process__grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(30px,5vw,70px);align-items:start;margin-top:40px}
+.steps{list-style:none;margin:0;padding:0;position:relative;display:flex;flex-direction:column;gap:6px}
+.steps::before{content:"";position:absolute;left:21px;top:22px;bottom:22px;width:1px;background:rgba(122,78,85,.25)}
+.steps__fill{position:absolute;left:21px;top:22px;width:1px;background:var(--rose-ink);height:0;transition:height .6s var(--ease)}
+.step{position:relative;display:grid;grid-template-columns:44px 1fr;gap:18px;padding:14px 0;cursor:pointer;background:none;border:0;text-align:left;color:inherit;font:inherit;width:100%}
+.step__dot{width:44px;height:44px;border-radius:50%;border:1px solid var(--rose);display:grid;place-items:center;background:var(--blush-soft);font-family:var(--display);font-size:1.05rem;transition:background .4s var(--ease),color .4s;z-index:1;font-variant-numeric:tabular-nums}
+.step.on .step__dot{background:var(--rose-ink);color:var(--white);border-color:var(--rose-ink)}
+.step h3{font-size:var(--step-1);font-family:var(--display);color:#A97A80;margin:8px 0 4px;transition:color .3s}
+.step.on h3{color:var(--rose-ink)}
+.step p{font-size:.98rem;max-width:42ch}
+.stage{position:relative;border-radius:18px;overflow:hidden;background:var(--blush-soft);aspect-ratio:16/11;box-shadow:0 30px 60px -40px rgba(122,78,85,.7)}
+.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:4%;transition:opacity .7s var(--ease),transform .9s var(--ease)}
+.stage img:not(.on){opacity:0;transform:scale(.96)}
+.stage__cap{position:absolute;left:16px;bottom:14px;background:rgba(248,245,230,.9);padding:.5em 1em;border-radius:999px;font-size:var(--step--1);letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+@media (max-width:860px){.process__grid{grid-template-columns:1fr}.stage{order:-1}}
+
+/* work */
+.work{background:var(--sky);color:var(--slate-ink)}
+.work h2{font-size:var(--step-4);margin-bottom:14px}
+.work__head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:34px}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid rgba(77,101,130,.4);background:transparent;color:var(--slate-ink);padding:.7em 1.15em;border-radius:999px;font:600 var(--step--1)/1 var(--body);letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:all .3s var(--ease)}
+.chip:hover{background:rgba(255,255,255,.5)}
+.chip[aria-pressed="true"]{background:var(--slate-ink);color:var(--white);border-color:var(--slate-ink)}
+.chip small{opacity:.7;margin-left:.35em;font-variant-numeric:tabular-nums}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
+.card{background:none;border:0;padding:0;text-align:left;font:inherit;color:inherit;cursor:pointer;display:flex;flex-direction:column;gap:14px;transition:opacity .4s,transform .5s var(--ease)}
+.card[hidden]{display:none!important}
+.card__media{position:relative;aspect-ratio:3/4;border-radius:8px;overflow:hidden;background:var(--sky-soft)}
+.card__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .6s var(--ease),transform 1s var(--ease)}
+.card__media img+img{opacity:0}
+.card:hover .card__media img:first-child{transform:scale(1.05)}
+.card:hover .card__media img+img{opacity:1}
+.card__more{position:absolute;right:12px;bottom:12px;width:42px;height:42px;border-radius:50%;background:rgba(248,245,230,.92);display:grid;place-items:center;color:var(--slate-ink);transform:scale(.8);opacity:0;transition:all .4s var(--ease)}
+.card:hover .card__more,.card:focus-visible .card__more{opacity:1;transform:none}
+.card__line{height:1px;background:rgba(77,101,130,.35);position:relative}
+.card__line::before{content:"";position:absolute;left:0;top:-3px;width:7px;height:7px;border-radius:50%;background:var(--slate-ink)}
+.card h3{font-family:var(--body);font-weight:700;font-size:1.15rem;letter-spacing:0;color:var(--slate-ink);line-height:1.2}
+.card__sub{font-weight:300;font-size:1.05rem}
+.card__loc{font-size:var(--step--1);letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--rose-ink)}
+
+/* lightbox */
+dialog{border:0;padding:0;background:transparent;max-width:min(1040px,94vw);width:100%;max-height:92vh;color:var(--ink)}
+dialog::backdrop{background:rgba(59,74,94,.55);backdrop-filter:blur(6px)}
+.lb{background:var(--cream);border-radius:18px;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);max-height:92vh}
+.lb__media{position:relative;background:var(--sky-soft);min-height:340px}
+.lb__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .5s}
+.lb__nav{position:absolute;bottom:14px;left:14px;display:flex;gap:8px}
+.lb__nav button,.lb__close{width:44px;height:44px;border-radius:50%;border:0;background:rgba(248,245,230,.92);color:var(--slate-ink);cursor:pointer;display:grid;place-items:center}
+.lb__count{position:absolute;bottom:24px;right:16px;background:rgba(248,245,230,.92);border-radius:999px;padding:.3em .8em;font-size:.8rem;font-weight:600;font-variant-numeric:tabular-nums}
+.lb__body{padding:clamp(24px,3.5vw,44px);overflow:auto;display:flex;flex-direction:column;gap:14px;position:relative}
+.lb__close{position:absolute;top:14px;right:14px}
+.lb__body h3{font-size:var(--step-2);color:var(--slate-ink);padding-right:50px}
+.lb__body .card__sub{color:var(--slate-ink)}
+.lb__body ul{list-style:none;padding:0;margin:10px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.lb__body li{background:var(--blush-soft);color:var(--rose-ink);border-radius:999px;padding:.45em .95em;font-size:.88rem;font-weight:600}
+.lb__steps{display:flex;gap:10px;margin-top:auto;padding-top:20px}
+@media (max-width:760px){.lb{grid-template-columns:1fr;max-height:92vh;overflow:auto}.lb__media{min-height:0;aspect-ratio:4/3}}
+
+/* clients */
+.clients{background:var(--sand);color:var(--white);text-align:center}
+.clients h2{font-size:var(--step-4);color:var(--white);margin-bottom:18px}
+.clients .eyebrow{color:var(--cream)}
+.marquee{overflow:hidden;margin-block:40px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.marquee__track{display:flex;gap:46px;width:max-content;animation:marq 60s linear infinite}
+.marquee:hover .marquee__track{animation-play-state:paused}
+.marquee span{font-family:var(--display);font-size:var(--step-2);white-space:nowrap;color:var(--white);opacity:.92}
+.marquee span::after{content:"✦";font-size:.5em;margin-left:46px;vertical-align:middle;color:var(--cream);opacity:.7}
+@keyframes marq{to{transform:translateX(-50%)}}
+.logos{border-radius:14px;overflow:hidden;max-width:1000px;margin-inline:auto}
+
+/* why */
+.why{background:var(--sky-soft) url(img/flower_b.webp) center/cover;text-align:center;color:var(--slate-ink)}
+.why .wrap{display:flex;flex-direction:column;align-items:center;gap:24px}
+.why h2{font-size:var(--step-3);color:#6E87A2}
+.why__cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:20px;text-align:left;width:100%}
+.why__item{background:rgba(255,255,255,.6);border-radius:14px;padding:26px;display:flex;flex-direction:column;gap:10px;transition:transform .5s var(--ease),background .4s}
+.why__item:hover{transform:translateY(-6px);background:rgba(255,255,255,.85)}
+.why__item h3{font-size:var(--step-1);color:var(--slate-ink)}
+.why__item svg{color:var(--rose)}
+@media (max-width:860px){.why__cols{grid-template-columns:1fr}}
+
+/* team */
+.team{background:var(--blush) url(img/pink_b.webp) center/cover;color:var(--rose-ink);text-align:center}
+.team h2{font-size:var(--step-4);margin-bottom:16px}
+.team .prose{margin-inline:auto}
+.team__grid{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(22px,4vw,56px);margin-top:56px}
+.team__grid .member{width:min(260px,calc(50% - 14px))}
+.member{display:flex;flex-direction:column;align-items:center;gap:14px}
+.member__arch{width:100%;max-width:240px;aspect-ratio:3/4;border-radius:999px 999px 10px 10px;overflow:hidden;background:var(--blush-soft);border:1px solid rgba(185,141,142,.5);transition:transform .6s var(--ease),box-shadow .6s}
+.member__arch img{width:100%;height:100%;object-fit:cover;object-position:top;filter:grayscale(1) contrast(1.02);transition:filter .7s var(--ease),transform .9s var(--ease)}
+.member:hover .member__arch{transform:translateY(-8px);box-shadow:0 26px 40px -28px rgba(122,78,85,.8)}
+.member:hover .member__arch img{filter:grayscale(.15);transform:scale(1.04)}
+.member h3{font-size:var(--step-1);color:var(--rose-ink)}
+.member.lead h3{color:var(--slate-ink)}
+.member span{font-size:var(--step--1);letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+
+/* contact */
+.contact{background:var(--cream) url(img/silk_b.webp) center/cover}
+.contact__quote{text-align:center;font-size:var(--step-3);color:#6E87A2;max-width:22ch;margin:0 auto 14px}
+.contact .center{text-align:center;color:var(--rose-ink);margin-bottom:56px}
+.contact__grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,56px);align-items:start}
+.card-c{background:rgba(255,255,255,.7);border-radius:18px;padding:clamp(22px,3vw,38px);border:1px solid rgba(255,255,255,.9)}
+.card-c h3{font-size:var(--step-2);color:var(--slate-ink);margin-bottom:6px}
+.card-c .role{color:var(--rose-ink);font-size:var(--step--1);letter-spacing:.16em;text-transform:uppercase;font-weight:600;margin-bottom:18px}
+.line{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}
+.line:last-child{border-bottom:0}
+.line div{min-width:0}
+.line small{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--rose-ink)}
+.line b{font-weight:600;color:var(--slate-ink);font-variant-numeric:tabular-nums;word-break:break-all;user-select:all}
+.copy{flex:none;border:1px solid var(--line);background:transparent;color:var(--slate-ink);border-radius:999px;padding:.5em .9em;font:600 .75rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;min-height:36px;transition:background .3s}
+.copy:hover{background:var(--sky-soft)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field--full{grid-column:1/-1}
+label{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--slate-ink)}
+input,select,textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--white);border:1px solid rgba(123,147,172,.5);border-radius:10px;padding:.8em .9em;width:100%;transition:border-color .3s,box-shadow .3s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--slate-ink);box-shadow:0 0 0 3px rgba(123,147,172,.25)}
+textarea{min-height:120px;resize:vertical}
+.err{color:#9B3D46;font-size:.85rem;min-height:1em}
+.note{grid-column:1/-1;font-size:.88rem;color:var(--slate-ink)}
+.out{grid-column:1/-1;background:var(--sky-soft);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:12px}
+.out pre{white-space:pre-wrap;font:inherit;font-size:.92rem;margin:0;max-height:220px;overflow:auto}
+@media (max-width:860px){.contact__grid{grid-template-columns:1fr}form{grid-template-columns:1fr}}
+
+/* finale + footer */
+.finale{position:relative;background:var(--sky) url(img/sunsky.webp) center/cover;text-align:center;padding-block:clamp(90px,12vw,160px) clamp(160px,20vw,260px);overflow:hidden}
+.finale .wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:18px}
+.finale h2{font-size:var(--step-3);color:#6E87A2}
+.finale img.wm{width:min(380px,74vw)}
+.foot{background:var(--cream);color:var(--slate-ink);font-size:.9rem}
+.foot .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:22px}
+.foot a{text-decoration:none;font-family:var(--display);letter-spacing:.08em}
+.foot .site{color:var(--rose-ink)}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,140%);background:var(--ink);color:var(--white);padding:.8em 1.3em;border-radius:999px;font-size:.9rem;font-weight:600;transition:transform .45s var(--ease);z-index:80}
+.toast.show{transform:translate(-50%,0)}
+.top{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));width:48px;height:48px;border-radius:50%;border:0;background:var(--slate-ink);color:var(--white);cursor:pointer;display:grid;place-items:center;transform:scale(0);transition:transform .4s var(--ease);z-index:55}
+.top.show{transform:scale(1)}
+
+/* ===== continuous colour wash ===== */
+.skybg{position:fixed;inset:0;z-index:-1;background:var(--sky);display:none;pointer-events:none}
+.blend .skybg{display:block}
+.blend :is(.hero,.band,.finale,.cut__stage){background:transparent!important}
+.blend :is(.hero,.intro,.pillars,.process,.why,.team,.contact,.finale,.regions)::before{content:"";position:absolute;inset:0;background:var(--tex) center/cover no-repeat;-webkit-mask-image:var(--mask);mask-image:var(--mask);pointer-events:none;z-index:0;opacity:var(--texo,.9)}
+.blend :is(.hero,.intro,.pillars,.process,.why,.team,.contact,.finale,.regions){--mask:linear-gradient(180deg,transparent 0%,#000 24%,#000 76%,transparent 100%)}
+.blend .hero{--tex:url(img/sunsky.webp);--mask:linear-gradient(180deg,#000 55%,transparent 100%);--texo:1}
+.blend .hero::before{z-index:-2}
+.blend .intro,.blend .process,.blend .team{--tex:url(img/pink_b.webp)}
+.blend .pillars{--tex:url(img/sky_b.webp)}
+.blend .why{--tex:url(img/flower_b.webp)}
+.blend .contact{--tex:url(img/silk_b.webp);--texo:.7}
+.blend .regions{--tex:url(img/pink_b.webp);--texo:.55}
+.blend .finale{--tex:url(img/sunsky.webp);--mask:linear-gradient(180deg,transparent 0%,#000 30%,#000 100%)}
+.blend .band>.wrap,.blend .finale>.wrap{position:relative;z-index:1}
+.blend .ascent .cut__stage{-webkit-mask-image:linear-gradient(180deg,transparent,#000 16%,#000 84%,transparent);mask-image:linear-gradient(180deg,transparent,#000 16%,#000 84%,transparent)}
+.blend .heartcut .cut__stage{background:radial-gradient(60% 50% at 50% 50%,rgba(255,255,255,.5),transparent 70%)!important}
+
+/* ===== sparkle trail ===== */
+#trail{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:45}
+
+/* ===== regions map ===== */
+.regions{color:var(--rose-ink)}
+.regions h2{font-size:var(--step-3);color:#A97A80;margin-block:10px 14px}
+.regions__grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,56px);align-items:center;margin-top:36px}
+.map{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 30px 60px -44px rgba(122,78,85,.8)}
+.map img{width:100%;height:auto}
+.spot{position:absolute;translate:-50% -50%;width:44px;height:44px;border:0;padding:0;background:none;cursor:pointer;display:grid;place-items:center;color:var(--white);filter:drop-shadow(0 6px 10px rgba(77,101,130,.45));transition:color .35s var(--ease),scale .35s var(--ease);animation:drift 4s ease-in-out infinite}
+.spot:nth-of-type(2){animation-delay:-1s}.spot:nth-of-type(3){animation-delay:-2s}.spot:nth-of-type(4){animation-delay:-3s}
+.spot svg{display:block;fill:currentColor;stroke:rgba(77,101,130,.35);stroke-width:1.2;overflow:visible}
+.spot::after{content:"";position:absolute;inset:4px 0;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.75),transparent);z-index:-1;animation:pulse 2.6s var(--ease) infinite}
+.spot:hover{scale:1.15}
+.spot[aria-pressed="true"]{color:var(--slate-ink)}
+.spot[aria-pressed="true"] svg{stroke:var(--white);stroke-width:1.6}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes pulse{0%{transform:scale(.8);opacity:.9}100%{transform:scale(1.7);opacity:0}}
+.rpanel{background:rgba(255,255,255,.72);border-radius:18px;padding:clamp(22px,3vw,36px);display:flex;flex-direction:column;gap:14px;min-height:420px}
+.rpanel h3{font-size:var(--step-3);color:var(--slate-ink)}
+.rpanel .count{font-family:var(--display);font-size:var(--step-2);color:#A97A80;font-variant-numeric:tabular-nums}
+.rpanel ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;max-height:230px;overflow:auto}
+.rpanel li button{width:100%;display:flex;justify-content:space-between;gap:10px;background:none;border:0;border-bottom:1px solid var(--line);padding:10px 0;font:600 .95rem/1.3 var(--body);color:var(--slate-ink);cursor:pointer;text-align:left}
+.rpanel li button:hover{color:var(--rose-ink)}
+.rpanel li small{font-weight:400;color:var(--rose-ink);white-space:nowrap}
+.rpanel .swap{animation:rise .5s var(--ease) both}
+@media (max-width:860px){.regions__grid{grid-template-columns:1fr}.rpanel{min-height:0}.spot{width:40px;height:40px}.spot svg{width:30px;height:19px}}
+
+/* ===== event planner ===== */
+.planner{color:var(--slate-ink)}
+.planner h2{font-size:var(--step-4);color:#6E87A2;margin-block:10px 14px}
+.planner__grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(24px,4vw,60px);align-items:start;margin-top:40px}
+.q{display:flex;flex-direction:column;gap:12px;padding-block:20px;border-bottom:1px solid var(--line)}
+.q:first-child{padding-top:0}
+.q__h{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.q__h b{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700}
+.q__h output{font-family:var(--display);font-size:var(--step-1);color:var(--rose-ink);font-variant-numeric:tabular-nums}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{border:1px solid rgba(77,101,130,.4);background:rgba(255,255,255,.6);color:var(--slate-ink);padding:.7em 1.1em;border-radius:999px;font:600 .9rem/1 var(--body);cursor:pointer;transition:all .3s var(--ease)}
+.opt:hover{border-color:var(--slate-ink)}
+.opt[aria-pressed="true"]{background:var(--slate-ink);border-color:var(--slate-ink);color:var(--white)}
+.moods{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.mood{border:2px solid transparent;border-radius:14px;padding:0;cursor:pointer;background:none;display:flex;flex-direction:column;gap:6px;font:600 .82rem/1 var(--body);color:var(--slate-ink);transition:border-color .3s}
+.mood i{display:block;height:58px;border-radius:11px;background:var(--g)}
+.mood span{padding:0 0 8px 4px}
+.mood[aria-pressed="true"]{border-color:var(--slate-ink)}
+input[type=range]{-webkit-appearance:none;appearance:none;height:4px;background:linear-gradient(90deg,var(--slate-ink) var(--p,30%),rgba(77,101,130,.2) var(--p,30%));border:0;border-radius:4px;padding:0}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--white);border:2px solid var(--slate-ink);cursor:grab;box-shadow:0 4px 10px rgba(77,101,130,.35)}
+input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:var(--white);border:2px solid var(--slate-ink);cursor:grab}
+.pv-wrap{position:sticky;top:calc(90px + env(safe-area-inset-top,0px));perspective:1000px}
+.pv{position:relative;border-radius:22px;overflow:hidden;padding:clamp(24px,3vw,38px);min-height:460px;display:flex;flex-direction:column;gap:14px;background:var(--pvg,linear-gradient(160deg,var(--sky),var(--cream)));color:var(--pvc,var(--slate-ink));box-shadow:0 40px 70px -46px rgba(59,74,94,.8);transition:background .6s var(--ease),color .6s;transform-style:preserve-3d}
+.pv__seal{position:absolute;right:-50px;bottom:-50px;width:240px;opacity:.22;transition:transform 1s var(--ease)}
+.pv__k{font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;font-weight:700;opacity:.85}
+.pv h3{font-size:var(--step-3);line-height:1.05}
+.pv__meta{display:flex;gap:18px;flex-wrap:wrap;font-weight:600}
+.pv__meta span{display:flex;flex-direction:column;gap:2px}
+.pv__meta small{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;opacity:.8}
+.pv__meta b{font-family:var(--display);font-weight:400;font-size:var(--step-1);font-variant-numeric:tabular-nums}
+.meter{display:flex;gap:6px}
+.meter i{flex:1;height:5px;border-radius:3px;background:currentColor;opacity:.18;transition:opacity .4s}
+.meter i.on{opacity:.9}
+.pv ul{list-style:none;padding:0;margin:4px 0 0;display:flex;flex-wrap:wrap;gap:7px;position:relative;z-index:1}
+.pv li{background:rgba(255,255,255,.6);border-radius:999px;padding:.4em .85em;font-size:.82rem;font-weight:600;animation:rise .4s var(--ease) both}
+.pv .btn{margin-top:auto;align-self:flex-start;position:relative;z-index:1}
+@media (max-width:860px){.planner__grid{grid-template-columns:1fr}.pv-wrap{position:relative;top:0}.moods{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* ===== cut scenes ===== */
+.curtain{position:fixed;inset:0;z-index:95;display:none;pointer-events:none}
+.motion .curtain{display:block}
+.curtain.live{pointer-events:auto}
+.curtain[hidden]{display:none!important}
+.curtain__top,.curtain__bot{position:absolute;left:0;right:0;height:50.5%;overflow:hidden}
+.curtain__top{top:0;background:linear-gradient(180deg,var(--sky),#E6EEF7)}
+.curtain__bot{bottom:0;background:linear-gradient(0deg,var(--blush),var(--blush-soft))}
+.curtain__top::after,.curtain__bot::after{content:"";position:absolute;left:-5%;right:-5%;height:42%;background:url(img/clouds.webp) center/cover;opacity:.95}
+.curtain__top::after{bottom:-6%;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 55%);mask-image:linear-gradient(to bottom,transparent,#000 55%)}
+.curtain__bot::after{top:-6%;transform:scaleY(-1);-webkit-mask-image:linear-gradient(to bottom,transparent,#000 55%);mask-image:linear-gradient(to bottom,transparent,#000 55%)}
+.curtain__mark{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;z-index:2;padding-inline:20px;text-align:center}
+.curtain__mark .s{width:clamp(110px,16vw,170px)}
+.curtain__mark .w{width:min(320px,70vw)}
+.curtain__mark .lbl{font-family:var(--display);font-size:var(--step-3);color:var(--slate-ink)}
+.curtain__mark .k{font-size:var(--step--1);letter-spacing:.32em;text-transform:uppercase;font-weight:700;color:var(--rose-ink)}
+.curtain__skip{position:absolute;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:3;background:rgba(255,255,255,.7);border:0;border-radius:999px;padding:.6em 1.1em;font:600 .75rem/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--slate-ink);cursor:pointer}
+
+.cut{position:relative;overflow:hidden}
+.cut__stage{position:relative;height:100svh;min-height:560px;overflow:hidden;display:grid;place-items:center}
+
+/* ascent: rising through seven clouds */
+.ascent .cut__stage{background:linear-gradient(180deg,var(--slate) 0%,var(--sky) 45%,var(--blush) 75%,var(--cream) 100%) 0 0/100% 220%}
+.ascent__glow{position:absolute;inset:0;background:radial-gradient(55% 50% at 50% 45%,var(--white),rgba(255,255,255,0) 70%);opacity:.35}
+.ascent__layers{position:absolute;inset:0}
+.ascent .layer{position:absolute;left:50%;top:50%;width:140%;max-width:none;translate:-50% -50%;opacity:calc(1 - var(--i)*.09);scale:calc(1.05 - var(--i)*.08)}
+.ascent .layer:nth-child(even){transform:scaleX(-1)}
+.ascent__txt{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;padding-inline:20px}
+.ascent__k{font-size:var(--step--1);letter-spacing:.4em;text-transform:uppercase;font-weight:700;color:var(--slate-ink)}
+.ascent__num{font-family:var(--display);font-size:clamp(8rem,26vw,19rem);line-height:.85;color:var(--slate-ink);font-variant-numeric:tabular-nums;text-shadow:0 10px 50px rgba(255,255,255,.8)}
+.ascent__line{font-family:var(--display);font-size:var(--step-2);color:var(--slate-ink);max-width:22ch}
+.ascent__bar{display:flex;gap:8px;margin-top:18px}
+.ascent__bar i{width:28px;height:3px;border-radius:2px;background:rgba(77,101,130,.25);transition:background .3s}
+.ascent__bar i.on{background:var(--slate-ink)}
+
+/* reality: a frame opens into the full stage */
+.reality .cut__stage{background:var(--cream);grid-template-rows:1fr auto;align-content:center}
+.reality__frame{position:absolute;inset:0;clip-path:inset(18% 20% 22% 20% round 20px)}
+.reality__frame img{width:100%;height:100%;object-fit:cover}
+.reality__frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(59,74,94,0) 40%,rgba(59,74,94,.7))}
+.reality__title{position:absolute;top:7%;left:0;right:0;text-align:center;z-index:2;font-family:var(--display);font-size:var(--step-3);color:var(--slate-ink);padding-inline:20px}
+.reality__words{position:absolute;bottom:7%;left:0;right:0;z-index:2;display:flex;justify-content:center;flex-wrap:wrap;gap:8px clamp(14px,3vw,40px);padding-inline:20px}
+.reality__words span{font-family:var(--display);font-size:var(--step-2);color:var(--slate-ink);opacity:.45;transition:opacity .3s}
+.reality__words span.on{opacity:1}
+
+/* reel: horizontal film of past events */
+.reel .cut__stage{background:var(--sky);place-items:center start;align-content:center}
+.reel__ghost{position:absolute;top:50%;left:0;translate:0 -50%;white-space:nowrap;font-family:var(--display);font-size:clamp(5rem,17vw,15rem);color:transparent;-webkit-text-stroke:1.5px rgba(77,101,130,.35);pointer-events:none;z-index:0}
+.reel__track{position:relative;z-index:1;display:flex;gap:clamp(14px,2vw,26px);padding-inline:max(20px,8vw);width:100%;overflow-x:auto;scrollbar-width:none}
+.motion .reel__track{overflow:visible;width:max-content}
+.reel__item{flex:none;width:clamp(200px,24vw,340px);margin:0;display:flex;flex-direction:column;gap:10px}
+.reel__item:nth-child(odd){margin-top:60px}
+.reel__item div{aspect-ratio:3/4;border-radius:10px;overflow:hidden;box-shadow:0 30px 50px -36px rgba(59,74,94,.8)}
+.reel__item img{width:100%;height:100%;object-fit:cover;scale:1.15}
+.reel__item figcaption{font-weight:700;color:var(--slate-ink)}
+.reel__item figcaption span{display:block;font-weight:400;font-size:.9rem;color:var(--rose-ink)}
+.reel__intro{flex:none;width:clamp(240px,26vw,360px);align-self:center;color:var(--slate-ink);display:flex;flex-direction:column;gap:12px}
+.reel__intro h2{font-size:var(--step-3);color:#6E87A2}
+
+/* heart: zoom into the mission */
+.heartcut .cut__stage{background:var(--sky)}
+.heartcut__img{position:absolute;left:50%;top:50%;width:min(620px,86vw);translate:-50% -54%}
+.heartcut__wash{position:absolute;inset:0;background:var(--cream);opacity:0;z-index:2}
+.heartcut__txt{position:relative;z-index:3;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;padding-inline:20px;margin-top:38vh}
+.heartcut__txt p{font-family:var(--display);font-size:var(--step-2);color:var(--slate-ink);max-width:24ch}
+.heartcut__end{position:absolute;inset:0;z-index:4;display:grid;place-items:center;text-align:center;padding-inline:20px;font-family:var(--display);font-size:var(--step-3);color:#6E87A2;opacity:0}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+<script>document.documentElement.classList.add('blend');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion')</script>
+</head>
+<body>
+<div class="skybg" id="skybg" aria-hidden="true"></div>
+<canvas id="trail" aria-hidden="true"></canvas>
+
+<div class="curtain live" id="curtain" aria-hidden="true">
+  <div class="curtain__top"></div>
+  <div class="curtain__bot"></div>
+  <div class="curtain__mark">
+    <img class="s" src="assets/seal.png" alt="">
+    <img class="w" src="assets/wordmark.png" alt="">
+    <span class="k" hidden>Next</span>
+    <span class="lbl" hidden></span>
+  </div>
+  <button class="curtain__skip" id="skip" tabindex="-1">Skip intro</button>
+</div>
+
+<div class="progress" id="progress"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="The Seventh Cloud, back to top">
+      <img src="assets/seal.png" alt="" width="44" height="44">
+      <span>The Seventh Cloud</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h16M4 16h16"/></svg>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#planner">Plan</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" id="hero" aria-label="The Seventh Cloud">
+    <canvas id="sparkles" aria-hidden="true"></canvas>
+    <img class="cloud cloud--b" data-depth="18" src="img/clouds.webp" alt="" aria-hidden="true">
+    <div class="wrap hero__in">
+      <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">The Seventh Cloud, luxury event management and experience design</h1>
+      <img class="hero__mark reveal-hero" data-depth="-10" src="assets/wordmark.png" alt="The Seventh Cloud" width="892" height="467">
+      <div class="hero__rule reveal-hero"></div>
+      <p class="eyebrow hero__tag reveal-hero">Luxury Event Management &amp; Experience Design</p>
+      <p class="hero__sub reveal-hero">A boutique luxury event house creating refined experiences across weddings, corporate events and large-scale productions.</p>
+      <div class="hero__cta reveal-hero">
+        <a class="btn btn--solid" href="#planner">Plan your event</a>
+        <a class="btn btn--ghost" href="#work">View our work</a>
+      </div>
+    </div>
+    <img class="cloud cloud--a" data-depth="34" src="img/clouds.webp" alt="" aria-hidden="true">
+    <div class="countries reveal-hero" aria-label="Where we operate"><span>Jordan</span><span>Lebanon</span><span>Saudi Arabia</span><span>UAE</span></div>
+  </section>
+
+  <!-- A DIFFERENT STANDARD -->
+  <section class="band intro">
+    <div class="wrap">
+      <h2 class="reveal">A Different Standard</h2>
+      <p class="eyebrow reveal">Precision meets experience</p>
+      <p class="prose reveal">We create refined, high-end event experiences across weddings, corporate events, and large-scale productions. We design and manage events that feel smooth and effortless. Behind the scenes, every detail is planned.</p>
+    </div>
+  </section>
+
+  <!-- WHO WE ARE -->
+  <section class="band band--sky who" id="about">
+    <div class="wrap who__grid">
+      <div class="who__body">
+        <h2 class="reveal">Who We Are?</h2>
+        <p class="lead reveal">A Boutique Luxury Event House</p>
+        <p class="prose reveal">Founded in 2025, <strong>The Seventh Cloud</strong> operates across <strong>Jordan</strong>, <strong>Lebanon</strong>, <strong>Saudi Arabia</strong>, and <strong>the UAE</strong>.</p>
+        <p class="prose reveal">We combine creative direction with strong operational management to deliver events that are visually refined and professionally executed.</p>
+        <div class="stats reveal">
+          <div class="stat"><b data-count="2025" data-plain="1">2025</b><span>Founded</span></div>
+          <div class="stat"><b data-count="4">4</b><span>Countries</span></div>
+          <div class="stat"><b data-count="21">21</b><span>Selected works</span></div>
+        </div>
+      </div>
+      <div class="who__photos">
+        <figure class="reveal"><img src="img/who0.webp" alt="Floral wedding reception under arched windows" loading="lazy"></figure>
+        <figure class="reveal"><img src="img/who1.webp" alt="Cherry-blossom installation over a buffet" loading="lazy"></figure>
+        <figure class="reveal"><img src="img/who2.webp" alt="Stadium opening ceremony with a golden trophy sculpture" loading="lazy"></figure>
+        <figure class="reveal"><img src="img/who3.webp" alt="Night-time stadium event with fireworks over the skyline" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGIONS MAP -->
+  <section class="band regions" id="regions">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--slate-ink)">Where we work</p>
+      <h2 class="reveal">Four Countries, One Standard</h2>
+      <p class="prose">Tap a country on the map to see what we’ve delivered there and how to reach us.</p>
+      <div class="regions__grid">
+        <div class="map" id="map">
+          <img src="img/map.webp" alt="Map of Saudi Arabia, Jordan, the UAE and Lebanon drawn as clouds" width="1200" height="745">
+          <button class="spot" data-r="Saudi Arabia" style="left:19%;top:42%" aria-pressed="true" aria-label="Saudi Arabia"><svg viewBox="0 0 64 40" width="38" height="24" aria-hidden="true"><path d="M17 37h32a12 12 0 0 0 2.6-23.7A15.5 15.5 0 0 0 21.4 9.6 11 11 0 0 0 6 20.2 8.5 8.5 0 0 0 17 37z"/></svg></button>
+          <button class="spot" data-r="Jordan" style="left:50%;top:32%" aria-pressed="false" aria-label="Jordan"><svg viewBox="0 0 64 40" width="38" height="24" aria-hidden="true"><path d="M17 37h32a12 12 0 0 0 2.6-23.7A15.5 15.5 0 0 0 21.4 9.6 11 11 0 0 0 6 20.2 8.5 8.5 0 0 0 17 37z"/></svg></button>
+          <button class="spot" data-r="UAE" style="left:49%;top:72%" aria-pressed="false" aria-label="UAE"><svg viewBox="0 0 64 40" width="38" height="24" aria-hidden="true"><path d="M17 37h32a12 12 0 0 0 2.6-23.7A15.5 15.5 0 0 0 21.4 9.6 11 11 0 0 0 6 20.2 8.5 8.5 0 0 0 17 37z"/></svg></button>
+          <button class="spot" data-r="Lebanon" style="left:88%;top:41%" aria-pressed="false" aria-label="Lebanon"><svg viewBox="0 0 64 40" width="38" height="24" aria-hidden="true"><path d="M17 37h32a12 12 0 0 0 2.6-23.7A15.5 15.5 0 0 0 21.4 9.6 11 11 0 0 0 6 20.2 8.5 8.5 0 0 0 17 37z"/></svg></button>
+        </div>
+        <div class="rpanel" id="rpanel" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUT SCENE 1: ASCENT -->
+  <section class="cut ascent" id="ascent" aria-label="Reaching the highest level">
+    <div class="cut__stage">
+      <div class="ascent__glow"></div>
+      <div class="ascent__layers" aria-hidden="true">
+        <img class="layer" style="--i:6" src="img/clouds.webp" alt="">
+        <img class="layer" style="--i:5" src="img/clouds.webp" alt="">
+        <img class="layer" style="--i:4" src="img/clouds.webp" alt="">
+        <img class="layer" style="--i:3" src="img/clouds.webp" alt="">
+        <img class="layer" style="--i:2" src="img/clouds.webp" alt="">
+        <img class="layer" style="--i:1" src="img/clouds.webp" alt="">
+        <img class="layer" style="--i:0" src="img/clouds.webp" alt="">
+      </div>
+      <div class="ascent__txt">
+        <span class="ascent__k">Cloud</span>
+        <b class="ascent__num" id="ascNum">7</b>
+        <p class="ascent__line" id="ascLine">Reaching the highest level</p>
+        <div class="ascent__bar" id="ascBar" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR NAME -->
+  <section class="band band--blush name">
+    <div class="wrap name__grid">
+      <div>
+        <h2 class="reveal">Our Name</h2>
+        <p class="name__sub reveal">The meaning behind <strong>“The Seventh Cloud”</strong></p>
+        <p class="prose reveal" style="margin-bottom:16px">The name comes from an Arabic expression that represents <strong>“reaching the highest level”</strong>.</p>
+        <p class="prose reveal">It reflects our goal to create experiences that go <strong>beyond expectations</strong> and <strong>feel truly special</strong> and <strong>memorable</strong>.</p>
+      </div>
+      <div class="name__art">
+        <img class="wm reveal" src="assets/wordmark.png" alt="" aria-hidden="true">
+        <div class="seal reveal" id="seal" role="img" aria-label="The Seventh Cloud seal, Event Organizer, 2025">
+          <img src="assets/seal.png" alt="" draggable="false">
+        </div>
+        <span class="seal__hint">Drag to spin the seal</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section class="band pillars" id="pillars">
+    <div class="wrap">
+      <div class="pillars__head">
+        <div>
+          <p class="eyebrow" style="color:var(--rose-ink)">What guides us</p>
+          <h2 class="reveal">The Foundation</h2>
+        </div>
+        <div class="tabs" role="tablist" aria-label="What guides us" id="tabs"></div>
+      </div>
+      <div class="panel" role="tabpanel" id="panel" aria-live="polite">
+        <div class="panel__txt">
+          <p class="eyebrow" id="pEyebrow"></p>
+          <h3 id="pTitle"></h3>
+          <p class="prose" id="pBody"></p>
+        </div>
+        <div class="panel__img"><img id="pImg" src="img/sunsky.webp" alt=""></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUT SCENE 2: CONCEPT TO REALITY -->
+  <section class="cut reality" id="reality" aria-label="From concept to reality">
+    <div class="cut__stage">
+      <div class="reality__frame" id="realFrame"><img src="img/stage.webp" alt="A golden oval stage under spotlights"></div>
+      <h2 class="reality__title" id="realTitle">From Concept to Reality</h2>
+      <div class="reality__words" id="realWords"><span class="on">Concept</span><span class="on">Planning</span><span class="on">Production</span><span class="on">Execution</span></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="band band--cream services" id="services">
+    <div class="wrap">
+      <div class="services__head">
+        <div>
+          <p class="eyebrow" style="color:var(--rose-ink)">End-to-end solutions</p>
+          <h2 class="reveal" style="color:#6E87A2">Our Services</h2>
+        </div>
+        <p class="prose reveal" style="color:var(--slate-ink)">We provide <strong>complete event services</strong>, covering concept development, planning, production, and execution. Everything is <strong>managed as one connected system</strong> by The Seventh Cloud.</p>
+      </div>
+      <div class="accordion" id="accordion">
+        <button class="svc on" aria-expanded="true">
+          <img src="img/stage.webp" alt="" loading="lazy">
+          <div class="svc__txt"><span class="svc__k">Structured and impactful</span><h3>Corporate Events</h3>
+          <p>We create professional event environments for <strong>corporate gatherings, product launches, and executive events</strong>. Each project is developed to communicate clearly and deliver strong impact.</p></div>
+        </button>
+        <button class="svc" aria-expanded="false">
+          <img src="img/who3.webp" alt="" loading="lazy">
+          <div class="svc__txt"><span class="svc__k">Precision at scale</span><h3>Large-Scale Productions</h3>
+          <p>We manage complex productions such as ceremonies, sporting events, and large public activations. Our team ensures accurate coordination, timing, and smooth execution at every level.</p></div>
+        </button>
+        <button class="svc" aria-expanded="false">
+          <img src="img/vegas.webp" alt="" loading="lazy">
+          <div class="svc__txt"><span class="svc__k">From concept to reality</span><h3>Design &amp; Production</h3>
+          <p>We develop event environments through scenography, spatial design, lighting, and sound. Each element is carefully planned to create a complete, immersive and unforgettable experience.</p></div>
+        </button>
+        <button class="svc" aria-expanded="false">
+          <img src="img/who0.webp" alt="" loading="lazy">
+          <div class="svc__txt"><span class="svc__k">Refined celebrations</span><h3>Weddings</h3>
+          <p>Refined, high-end wedding experiences designed and managed so the day feels smooth and effortless, while every detail is planned behind the scenes.</p></div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="band process" id="process">
+    <div class="wrap">
+      <p class="eyebrow">Clear and structured</p>
+      <h2 class="reveal">Our Process</h2>
+      <p class="prose reveal">Each stage is managed carefully to ensure clarity, efficiency, and smooth delivery.</p>
+      <div class="process__grid">
+        <ol class="steps" id="steps">
+          <span class="steps__fill" id="stepsFill" aria-hidden="true"></span>
+        </ol>
+        <div class="stage" id="stage">
+          <img class="on" src="img/ill_process.webp" alt="Illustration of the team planning on clouds" data-i="0">
+          <img src="img/ill_services.webp" alt="Illustration of connected event services" data-i="1">
+          <img src="img/ill_scale.webp" alt="Illustration of productions and activations" data-i="2">
+          <img src="img/ill_exec.webp" alt="Illustration of the on-site control room" data-i="3">
+          <span class="stage__cap" id="stageCap">Understand</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUT SCENE 3: REEL -->
+  <section class="cut reel" id="reel" aria-label="Highlights from previous events">
+    <div class="cut__stage">
+      <div class="reel__ghost" id="reelGhost" aria-hidden="true">Previous Experiences · Previous Experiences</div>
+      <div class="reel__track" id="reelTrack">
+        <div class="reel__intro"><p class="eyebrow" style="color:var(--rose-ink)">On the ground</p><h2>Moments We’ve Delivered</h2><p>Fan zones, championships, festivals and conferences across the region.</p></div>
+        <figure class="reel__item"><div><img src="img/p19_2.webp" alt="" loading="lazy"></div><figcaption>Saudi Games<span>Fan Zone, Riyadh</span></figcaption></figure>
+        <figure class="reel__item"><div><img src="img/p23_1.webp" alt="" loading="lazy"></div><figcaption>Saudi Games<span>Accreditation, Riyadh</span></figcaption></figure>
+        <figure class="reel__item"><div><img src="img/p18_0.webp" alt="" loading="lazy"></div><figcaption>World Cup Fan Zone<span>Capital Bank, Jordan</span></figcaption></figure>
+        <figure class="reel__item"><div><img src="img/p24_3.webp" alt="" loading="lazy"></div><figcaption>World Pool Championship<span>Jeddah</span></figcaption></figure>
+        <figure class="reel__item"><div><img src="img/p23_4.webp" alt="" loading="lazy"></div><figcaption>Layali Diriyah<span>Riyadh</span></figcaption></figure>
+        <figure class="reel__item"><div><img src="img/p20_0.webp" alt="" loading="lazy"></div><figcaption>MDLBeast<span>Soundstorm</span></figcaption></figure>
+        <figure class="reel__item"><div><img src="img/p21_0.webp" alt="" loading="lazy"></div><figcaption>Jockey Club of Saudi Arabia<span>JCSA</span></figcaption></figure>
+        <figure class="reel__item"><div><img src="img/p24_1.webp" alt="" loading="lazy"></div><figcaption>LEAP<span>Riyadh</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="band work" id="work">
+    <div class="wrap">
+      <div class="work__head">
+        <div>
+          <p class="eyebrow" style="color:var(--rose-ink)">Previous experiences</p>
+          <h2 class="reveal" style="color:#6E87A2">Selected Works</h2>
+          <p class="prose">Our portfolio presents selected previous projects and collaborations, showing our ability to manage different types of events with consistency.</p>
+        </div>
+        <div class="filters" id="filters" aria-label="Filter projects"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="band clients" id="clients">
+    <div class="wrap">
+      <p class="eyebrow">Trusted by</p>
+      <h2 class="reveal">Clients &amp; Partners</h2>
+    </div>
+    <div class="marquee" aria-hidden="true"><div class="marquee__track" id="marquee"></div></div>
+    <div class="wrap"><img class="logos reveal" src="img/clients.webp" alt="Client logos including Global Health Exhibition, Ray-Ban, BMW, Chanel, Philips, VOSS, LEAP, Black Hat, MDLBeast, Ministry of Culture and Capital Bank" loading="lazy"></div>
+  </section>
+
+  <!-- WHY -->
+  <section class="band why">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--rose-ink)">Precision, care &amp; local expertise</p>
+      <h2 class="reveal">Why Partner With The Seventh Cloud</h2>
+      <p class="prose reveal">We deliver seamless event experiences through strong management, clear direction, and precise execution. From corporate galas and product launches to conferences and large-scale sporting events, each project is designed to be engaging, well structured, and professionally executed.</p>
+      <div class="why__cols">
+        <div class="why__item reveal">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6"/></svg>
+          <h3>Immersive environments</h3>
+          <p>With in-house expertise in technical production, scenography, and live entertainment, every venue is transformed into a refined, high-performing experience.</p>
+        </div>
+        <div class="why__item reveal">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <h3>On time, without compromise</h3>
+          <p>We manage complex logistics and make sure every detail runs on time, without compromise.</p>
+        </div>
+        <div class="why__item reveal">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <h3>Deep local knowledge</h3>
+          <p>Supported by deep local knowledge, each event is delivered with clarity, reliability, and confidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="band team" id="team">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--slate-ink)">Structured expertise</p>
+      <h2 class="reveal" style="color:#A97A80">Meet The Team</h2>
+      <p class="prose reveal">Our team includes specialists in operations, management, design, and project coordination. Each member plays a clear role to ensure every project is executed with precision and consistency.</p>
+      <div class="team__grid">
+        <div class="member lead reveal"><div class="member__arch"><img src="img/t_ibrahim.webp" alt="Ibrahim Abu Abed" loading="lazy"></div><h3>Ibrahim Abu Abed</h3><span>Founder &amp; Head of Operations</span></div>
+        <div class="member reveal"><div class="member__arch"><img src="img/t_raghad.webp" alt="Raghad Abu Abed" loading="lazy"></div><h3>Raghad Abu Abed</h3><span>Co-Founder &amp; Projects Lead</span></div>
+        <div class="member reveal"><div class="member__arch"><img src="img/t_saif.webp" alt="Saif Juqqa" loading="lazy"></div><h3>Saif Juqqa</h3><span>Business Development Manager</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUT SCENE 4: HEART -->
+  <section class="cut heartcut" id="heartcut" aria-label="Our mission">
+    <div class="cut__stage">
+      <img class="heartcut__img" id="heartImg" src="img/heart.webp" alt="" aria-hidden="true">
+      <div class="heartcut__txt" id="heartTxt">
+        <span class="eyebrow" style="color:var(--rose-ink)">Our mission</span>
+        <p>We develop each event into its own “Seventh Cloud”.</p>
+      </div>
+      <div class="heartcut__wash" id="heartWash"></div>
+      <p class="heartcut__end" id="heartEnd">Let’s create something exceptional</p>
+    </div>
+  </section>
+
+  <!-- EVENT PLANNER -->
+  <section class="band planner" id="planner">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--rose-ink)">Interactive brief</p>
+      <h2 class="reveal">Design Your Seventh Cloud</h2>
+      <p class="prose">Shape the occasion, choose a mood and the services you need. Your brief builds itself on the right, ready to send to our team.</p>
+      <div class="planner__grid">
+        <div>
+          <div class="q"><div class="q__h"><b>The occasion</b></div><div class="opts" id="pOcc"></div></div>
+          <div class="q"><div class="q__h"><b>Country</b></div><div class="opts" id="pCountry"></div></div>
+          <div class="q"><div class="q__h"><label for="pGuests" style="font-size:.78rem">Guests</label><output id="pGuestsOut" for="pGuests">250</output></div><input type="range" id="pGuests" min="0" max="100" value="47" aria-describedby="pGuestsOut"></div>
+          <div class="q"><div class="q__h"><b>Mood</b></div><div class="moods" id="pMood"></div></div>
+          <div class="q"><div class="q__h"><b>Services</b><output id="pSvcOut">3 selected</output></div><div class="opts" id="pSvc"></div></div>
+        </div>
+        <div class="pv-wrap">
+          <div class="pv" id="pv">
+            <img class="pv__seal" id="pvSeal" src="assets/seal.png" alt="">
+            <span class="pv__k">Your brief</span>
+            <h3 id="pvTitle">A Wedding in Jordan</h3>
+            <div class="pv__meta">
+              <span><small>Guests</small><b id="pvGuests">250</b></span>
+              <span><small>Scale</small><b id="pvScale">Signature</b></span>
+              <span><small>Mood</small><b id="pvMood">Blush</b></span>
+            </div>
+            <div class="meter" id="pvMeter" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></div>
+            <ul id="pvList"></ul>
+            <button class="btn btn--solid" id="pvSend" type="button">Send this brief</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="band contact" id="contact">
+    <div class="wrap">
+      <h2 class="contact__quote reveal">“Where Every Experience Reaches The Seventh Cloud”</h2>
+      <p class="eyebrow center">Let’s create something exceptional</p>
+      <div class="contact__grid">
+        <div class="card-c reveal">
+          <h3>Ibrahim Abu Abed</h3>
+          <p class="role">Founder &amp; Head of Operations</p>
+          <div class="line"><div><small>Jordan</small><b>+962 79 069 7080</b></div><button class="copy" data-copy="+962790697080">Copy</button></div>
+          <div class="line"><div><small>UAE</small><b>+971 54 455 1313</b></div><button class="copy" data-copy="+971544551313">Copy</button></div>
+          <div class="line"><div><small>Saudi Arabia</small><b>+966 56 688 8450</b></div><button class="copy" data-copy="+966566888450">Copy</button></div>
+          <div class="line"><div><small>Email</small><b>ibrahim@theseventhcloud.com</b></div><button class="copy" data-copy="ibrahim@theseventhcloud.com">Copy</button></div>
+          <div class="line"><div><small>Instagram &amp; TikTok</small><b>@the7thcloud.jo</b></div><a class="copy" href="https://www.instagram.com/the7thcloud.jo/" target="_blank" rel="noopener">Open</a></div>
+        </div>
+        <div class="card-c reveal">
+          <h3>Tell us about your event</h3>
+          <p class="role">We’ll prepare your enquiry to send by email</p>
+          <form id="form" novalidate>
+            <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required><span class="err" id="e-name"></span></div>
+            <div class="field"><label for="f-mail">Email or phone</label><input id="f-mail" name="contact" autocomplete="email" required><span class="err" id="e-mail"></span></div>
+            <div class="field"><label for="f-type">Event type</label>
+              <select id="f-type" name="type"><option>Wedding</option><option>Corporate Event</option><option>Product Launch</option><option>Large-Scale Production</option><option>Conference or Exhibition</option><option>Other</option></select></div>
+            <div class="field"><label for="f-country">Country</label>
+              <select id="f-country" name="country"><option>Jordan</option><option>Lebanon</option><option>Saudi Arabia</option><option>UAE</option></select></div>
+            <div class="field"><label for="f-date">Preferred date</label><input id="f-date" name="date" type="date"></div>
+            <div class="field"><label for="f-guests">Expected guests</label><input id="f-guests" name="guests" inputmode="numeric" placeholder="e.g. 250"></div>
+            <div class="field field--full"><label for="f-msg">Your vision</label><textarea id="f-msg" name="msg" placeholder="Tell us about the occasion, the feeling you want, and anything already decided."></textarea></div>
+            <div class="field--full"><button class="btn btn--solid" type="submit">Prepare my enquiry</button></div>
+            <div class="out" id="out" hidden>
+              <strong style="color:var(--slate-ink)">Your enquiry is ready. Copy it and send it to ibrahim@theseventhcloud.com.</strong>
+              <pre id="outText"></pre>
+              <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="copy" type="button" id="copyOut">Copy enquiry</button><button class="copy" type="button" data-copy="ibrahim@theseventhcloud.com">Copy email address</button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINALE -->
+  <section class="finale" aria-label="See you on the Seventh Cloud">
+    <div class="wrap">
+      <h2 class="reveal">See You On</h2>
+      <img class="wm reveal" src="assets/wordmark.png" alt="The Seventh Cloud">
+    </div>
+    <img class="cloud cloud--a" data-depth="24" src="img/clouds.webp" alt="" aria-hidden="true">
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a href="https://www.instagram.com/the7thcloud.jo/" target="_blank" rel="noopener">@THE7THCLOUD.JO</a>
+    <span class="site">theseventhcloud.com</span>
+    <span>Jordan · Lebanon · Saudi Arabia · UAE</span>
+  </div>
+</footer>
+
+<dialog id="lb" aria-labelledby="lbTitle">
+  <div class="lb">
+    <div class="lb__media" id="lbMedia">
+      <div class="lb__nav"><button id="lbPrevImg" aria-label="Previous photo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 6l-6 6 6 6"/></svg></button><button id="lbNextImg" aria-label="Next photo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 6l6 6-6 6"/></svg></button></div>
+      <span class="lb__count" id="lbCount"></span>
+    </div>
+    <div class="lb__body">
+      <button class="lb__close" id="lbClose" aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <span class="card__loc" id="lbLoc"></span>
+      <h3 id="lbTitle"></h3>
+      <p class="card__sub" id="lbSub"></p>
+      <p style="font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--slate-ink);margin-top:10px">What we delivered</p>
+      <ul id="lbList"></ul>
+      <div class="lb__steps"><button class="btn btn--ghost" id="lbPrev">Previous</button><button class="btn btn--solid" id="lbNext">Next project</button></div>
+    </div>
+  </div>
+</dialog>
+
+<button class="top" id="toTop" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 15l6-6 6 6"/></svg></button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $ = s=>document.querySelector(s), $$ = s=>[...document.querySelectorAll(s)];
+
+/* ---------- toast + copy ---------- */
+const toast=$('#toast'); let tt;
+function say(m){toast.textContent=m;toast.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>toast.classList.remove('show'),2200)}
+async function copy(text){
+  try{await navigator.clipboard.writeText(text);say('Copied: '+(text.length>40?'enquiry text':text))}
+  catch(e){const r=document.createRange();const n=[...document.querySelectorAll('b,pre')].find(x=>x.textContent.replace(/\s/g,'')===text.replace(/\s/g,''))||$('#outText');r.selectNodeContents(n);const s=getSelection();s.removeAllRanges();s.addRange(r);say('Selected. Press Ctrl+C or ⌘C to copy')}
+}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-copy]');if(b&&b.tagName==='BUTTON')copy(b.dataset.copy)});
+
+/* ---------- nav ---------- */
+const nav=$('#nav'),menuBtn=$('#menuBtn'),prog=$('#progress'),toTop=$('#toTop');
+menuBtn.addEventListener('click',()=>{const o=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',o)});
+$$('#navLinks a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded',false)}));
+function onScroll(){const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;nav.classList.toggle('scrolled',y>40);prog.style.transform=`scaleX(${h>0?y/h:0})`;toTop.classList.toggle('show',y>900)}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+toTop.addEventListener('click',()=>scrollTo({top:0,behavior:reduce?'auto':'smooth'}));
+const secs=['about','services','process','work','team','planner','contact'].map(id=>document.getElementById(id));
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){$$('#navLinks a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+en.target.id))}}),{rootMargin:'-45% 0px -50% 0px'});
+secs.forEach(s=>s&&io.observe(s));
+
+/* ---------- hero sparkles (catalog glitter) ---------- */
+const cv=$('#sparkles'),cx=cv.getContext('2d');let W,H,pts=[];
+function size(){const r=cv.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);W=r.width;H=r.height;cv.width=W*d;cv.height=H*d;cx.setTransform(d,0,0,d,0,0);pts=Array.from({length:Math.round(W*H/9000)},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.6+.3,p:Math.random()*6.28,s:Math.random()*.25+.05}))}
+let mx=.5,my=.5;
+function draw(t){cx.clearRect(0,0,W,H);for(const p of pts){const a=.35+.65*Math.abs(Math.sin(p.p+t*.0012*p.s*6));cx.globalAlpha=a;cx.fillStyle='#fff';cx.beginPath();cx.arc(p.x+(mx-.5)*14*p.r,p.y-((t*p.s*.02)%H)+(my-.5)*10,p.r,0,6.28);cx.fill();if(p.y-((t*p.s*.02)%H)<-4)p.y+=H}if(!reduce)requestAnimationFrame(draw)}
+size();addEventListener('resize',size);requestAnimationFrame(draw);
+
+/* hero mouse parallax */
+const hero=$('#hero');
+if(!reduce){hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();mx=(e.clientX-r.left)/r.width;my=(e.clientY-r.top)/r.height;
+  $$('#hero [data-depth]').forEach(el=>{const d=+el.dataset.depth;el.style.translate=`${(mx-.5)*d}px ${(my-.5)*d*.4}px`})})}
+
+/* ---------- pillars tabs ---------- */
+const pillars=[
+ {k:'Foundation',e:'Structure and creativity',t:'The Foundation',b:'Our work combines <strong>precise execution</strong> inspired by Dubai and <strong>creative depth</strong> inspired by Lebanon. This balance allows us to deliver experiences that are structured, expressive, and emotionally engaging.',i:'img/sunsky.webp',a:'Soft sky at sunrise'},
+ {k:'Vision',e:'Long-term direction',t:'Our Vision',b:'To become a <strong>leading luxury event company</strong> in the region, known for refined design, strong execution, and consistent quality.',i:'img/map.webp',a:'Jordan, Lebanon, Saudi Arabia and the UAE drawn as clouds'},
+ {k:'Mission',e:'What we deliver',t:'Our Mission',b:'We develop each event into its own <strong>“Seventh Cloud”</strong>. Every experience is carefully designed, well-managed, and executed with attention to detail from beginning to end.',i:'img/heart.webp',a:'A glowing heart-shaped cloud'},
+ {k:'Philosophy',e:'Composed excellence',t:'Our Philosophy',b:'We <strong>simplify the process</strong> so our clients can <strong>focus on the experience</strong>. At the same time, we manage every detail with clarity, structure, and control to ensure everything runs seamlessly.',i:'img/who1.webp',a:'Blossom installation'},
+ {k:'Approach',e:'Clear and intentional',t:'Our Approach',b:'<strong>“Every decision is guided by purpose.”</strong> Through structure, flow, and precise attention to detail, we build experiences that feel refined, balanced, and complete.',i:'img/who0.webp',a:'Wedding reception setting'}];
+const tabs=$('#tabs'),panel=$('#panel');
+pillars.forEach((p,i)=>{const b=document.createElement('button');b.className='tab';b.role='tab';b.id='tab-'+i;b.textContent=p.k;b.setAttribute('aria-selected',i===0);b.setAttribute('aria-controls','panel');b.tabIndex=i?-1:0;b.onclick=()=>setPillar(i,true);tabs.append(b)});
+let pi=0,pTimer;
+function setPillar(i,user){pi=i;const p=pillars[i];$$('.tab').forEach((t,j)=>{t.setAttribute('aria-selected',j===i);t.tabIndex=j===i?0:-1});panel.setAttribute('aria-labelledby','tab-'+i);
+  $('#pEyebrow').textContent=p.e;$('#pTitle').textContent=p.t;$('#pBody').innerHTML=p.b;const im=$('#pImg');im.src=p.i;im.alt=p.a;
+  panel.classList.remove('swap');void panel.offsetWidth;panel.classList.add('swap');if(user)clearInterval(pTimer)}
+tabs.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const n=(pi+(e.key==='ArrowRight'?1:pillars.length-1))%pillars.length;setPillar(n,true);$('#tab-'+n).focus()}});
+setPillar(0);
+if(!reduce){pTimer=setInterval(()=>setPillar((pi+1)%pillars.length),6500);panel.addEventListener('pointerenter',()=>clearInterval(pTimer))}
+
+/* ---------- services accordion ---------- */
+const svcs=$$('.svc');
+svcs.forEach(s=>{const act=()=>{svcs.forEach(o=>{o.classList.toggle('on',o===s);o.setAttribute('aria-expanded',o===s)})};s.addEventListener('click',act);if(matchMedia('(hover:hover)').matches)s.addEventListener('mouseenter',act)});
+
+/* ---------- process stepper ---------- */
+const steps=[
+ {t:'Understand',d:'We begin by understanding client needs.'},
+ {t:'Plan',d:'Detailed planning, with every service managed as one connected system.'},
+ {t:'Coordinate',d:'Structured coordination of production, suppliers and teams, so each stage stays clear and efficient.'},
+ {t:'Execute on-site',d:'During the event, our team manages all operations on-site. We monitor every detail, respond quickly to any changes, and ensure everything runs according to plan.'}];
+const ol=$('#steps');
+steps.forEach((s,i)=>{const li=document.createElement('li');li.innerHTML=`<button class="step${i?'':' on'}" data-i="${i}" aria-pressed="${!i}"><span class="step__dot">${i+1}</span><span><h3>${s.t}</h3><p>${s.d}</p></span></button>`;ol.append(li)});
+let si=0,sTimer;
+function setStep(i){si=i;$$('.step').forEach((b,j)=>{b.classList.toggle('on',j<=i);b.setAttribute('aria-pressed',j===i)});$$('#stage img').forEach(im=>im.classList.toggle('on',+im.dataset.i===i));$('#stageCap').textContent=steps[i].t;
+  const all=$$('.step');const a=all[0].getBoundingClientRect(),b=all[i].getBoundingClientRect();$('#stepsFill').style.height=(b.top-a.top)+'px'}
+ol.addEventListener('click',e=>{const b=e.target.closest('.step');if(b){clearInterval(sTimer);setStep(+b.dataset.i)}});
+setStep(0);addEventListener('resize',()=>setStep(si));
+if(!reduce){const so=new IntersectionObserver(es=>{es.forEach(en=>{clearInterval(sTimer);if(en.isIntersecting)sTimer=setInterval(()=>setStep((si+1)%steps.length),3800)})},{threshold:.4});so.observe($('#process'))}
+
+/* ---------- works ---------- */
+const W_=[
+ {t:'World Cup Fan Zone',s:'Capital Bank',l:'Jordan',c:'Sports',img:['p18_0','p18_1'],d:['Branding and activations','Photography','Full Operation']},
+ {t:'Independence Day',s:'Capital Bank',l:'Jordan',c:'Culture & Festivals',img:['p18_2','p18_3'],d:['Production','Entertainment Acts','Full Operation']},
+ {t:'Gamers 8',s:'Aramco F1 Simulators',l:'Riyadh',c:'Sports',img:['p19_0','p19_1'],d:['Crowd Management','Receptionist','Sales']},
+ {t:'Saudi Games',s:'Fan Zone',l:'Riyadh',c:'Sports',img:['p19_2','p19_3'],d:['Crowd Management','Traffic Control','Hostess','Full Operation','Management','VIP Protocol']},
+ {t:'Chanel',s:'Eyeglasses Event',l:'Saudi Arabia',c:'Brands & Fashion',img:['p19_4'],d:['Hostess','Security']},
+ {t:'MDLBeast',s:'Soundstorm',l:'Riyadh',c:'Culture & Festivals',img:['p20_0'],d:['Crowd Management','Hostess','Security','Cleaners']},
+ {t:'Wayshion',s:'Fashion',l:'Saudi Arabia',c:'Brands & Fashion',img:['p20_1'],d:['Crowd Management','Hostess','Stage Management']},
+ {t:'LEAP',s:'Tech Conference, brand activation',l:'Riyadh',c:'Conferences',img:['p20_2','p20_3'],d:['Promoters','Sales']},
+ {t:'APH',s:'Wayshion',l:'Saudi Arabia',c:'Brands & Fashion',img:['p20_4'],d:['Crowd Management','Traffic Control','Hostess']},
+ {t:'Jockey Club of Saudi Arabia',s:'JCSA',l:'Riyadh',c:'Sports',img:['p21_0','p21_1'],d:['Customer Service','Merchandise','Ushers/Organizer','Host/Hostess','Supervisors','Managers']},
+ {t:'Crown Prince Camel Festival',s:'Festival in Taif',l:'Taif',c:'Culture & Festivals',img:['p21_2','p21_3'],d:['Full Operational Plan','Senior Level Managers','Ushers','Hosts/Hostesses','Full Waste Management','Security Management']},
+ {t:'Global Health Exhibition',s:'Exhibition',l:'Riyadh',c:'Conferences',img:['p21_4'],d:['Project Managers','Operation Managers','Traffic Leads','Traffic Supervisors','Traffic Marshals','Runner']},
+ {t:'InFlavour',s:'Food exhibition',l:'Riyadh',c:'Conferences',img:['p22_0'],d:['Project Managers','Operation Managers','Traffic Leads','Traffic Supervisors','Traffic Marshals','Runners']},
+ {t:'“Lai Ba” Saudi Culture Week',s:'Cultural showcase',l:'Shanghai',c:'Culture & Festivals',img:['p22_1','p22_2'],d:['Project Manager','Supervisor','Meet and Greet team','Host/Hostesses']},
+ {t:'Saudi-African Summit',s:'Summit',l:'Riyadh',c:'Conferences',img:['p22_3','p22_4'],d:['Project Managers','Operation Managers','Supervisors','Host/Hostesses','Runners']},
+ {t:'Saudi Games',s:'Accreditation',l:'Riyadh',c:'Sports',img:['p23_0','p23_1'],d:['Senior Level Accreditation','Full on Accreditation']},
+ {t:'Black Hat',s:'Cybersecurity conference',l:'Riyadh',c:'Conferences',img:['p23_2','p23_3'],d:['Project Managers','Operation Managers','Traffic Leads','Traffic Supervisors','Traffic Marshals','Runners']},
+ {t:'Layali Diriyah',s:'Seasonal festival',l:'Riyadh',c:'Culture & Festivals',img:['p23_4'],d:['Supervisors','Crowd Management']},
+ {t:'LEAP',s:'Tech Conference, operations',l:'Riyadh',c:'Conferences',img:['p24_0','p24_1'],d:['Project Managers','Operation Managers','Traffic Leads','Traffic Supervisors','Traffic Marshals','Runners']},
+ {t:'World Fencing Championship',s:'Championship',l:'Riyadh',c:'Sports',img:['p24_2'],d:['Operations Manager','Supervisors','VIP Hosts/Hostesses','Crowd Management']},
+ {t:'World Pool Championship',s:'Championship',l:'Jeddah',c:'Sports',img:['p24_3'],d:['Operations Manager','Supervisors','European VIP Hostesses']},
+ {t:'Cultural Insurance Conference',s:'Conference',l:'Riyadh',c:'Conferences',img:['p24_4'],d:['Operations Manager','Supervisors','Protocol Team','VIP Hosts/Hostess','Full Waste Management','Valet Parking','Traffic Specialists','Traffic Marshals']}];
+const grid=$('#grid'),filt=$('#filters');
+const cats=['All',...new Set(W_.map(w=>w.c))];
+cats.forEach((c,i)=>{const b=document.createElement('button');b.className='chip';b.setAttribute('aria-pressed',!i);b.innerHTML=`${c}<small>${c==='All'?W_.length:W_.filter(w=>w.c===c).length}</small>`;b.onclick=()=>filterBy(c,b);filt.append(b)});
+W_.forEach((w,i)=>{const b=document.createElement('button');b.className='card';b.dataset.c=w.c;b.dataset.i=i;b.setAttribute('aria-label',`${w.t}, ${w.s}. Open details`);
+  b.innerHTML=`<div class="card__media"><img src="img/${w.img[0]}.webp" alt="" loading="lazy">${w.img[1]?`<img src="img/${w.img[1]}.webp" alt="" loading="lazy">`:''}<span class="card__more"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg></span></div><div class="card__line"></div><span class="card__loc">${w.l}</span><div><h3>${w.t}</h3><p class="card__sub">${w.s}</p></div>`;
+  b.onclick=()=>openLb(i);grid.append(b)});
+document.querySelector('.stat b[data-count="21"]').textContent=W_.length;document.querySelector('.stat b[data-count="21"]').dataset.count=W_.length;
+let visible=W_.map((_,i)=>i);
+function filterBy(c,btn){$$('.chip').forEach(x=>x.setAttribute('aria-pressed',x===btn));const cards=$$('.card');visible=[];
+  cards.forEach(el=>{const show=c==='All'||el.dataset.c===c;el.hidden=!show;if(show)visible.push(+el.dataset.i)});
+  if(!reduce&&window.gsap)gsap.fromTo(cards.filter(x=>!x.hidden),{y:24,scale:.96},{y:0,scale:1,duration:.5,stagger:.04,ease:'back.out(1.4)'})}
+
+/* lightbox */
+const lb=$('#lb');let cur=0,img=0,lastFocus;
+function renderLb(){const w=W_[cur];$('#lbTitle').textContent=w.t;$('#lbSub').textContent=w.s;$('#lbLoc').textContent=w.l+' · '+w.c;
+  $('#lbList').innerHTML=w.d.map(x=>`<li>${x}</li>`).join('');
+  const m=$('#lbMedia');m.querySelectorAll('img').forEach(x=>x.remove());const im=document.createElement('img');im.src=`img/${w.img[img]}.webp`;im.alt=`${w.t}, photo ${img+1}`;m.prepend(im);
+  $('#lbCount').textContent=`${img+1} / ${w.img.length}`;$('#lbPrevImg').parentElement.hidden=w.img.length<2;$('#lbCount').hidden=w.img.length<2}
+function openLb(i){cur=i;img=0;lastFocus=document.activeElement;renderLb();lb.showModal();document.body.style.overflow='hidden'}
+function step(d){const k=visible.indexOf(cur);cur=visible[(k+d+visible.length)%visible.length];img=0;renderLb()}
+$('#lbClose').onclick=()=>lb.close();
+lb.addEventListener('close',()=>{document.body.style.overflow='';lastFocus&&lastFocus.focus()});
+lb.addEventListener('click',e=>{if(e.target===lb)lb.close()});
+$('#lbNext').onclick=()=>step(1);$('#lbPrev').onclick=()=>step(-1);
+$('#lbNextImg').onclick=()=>{img=(img+1)%W_[cur].img.length;renderLb()};$('#lbPrevImg').onclick=()=>{img=(img-1+W_[cur].img.length)%W_[cur].img.length;renderLb()};
+lb.addEventListener('keydown',e=>{if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1)});
+
+/* ---------- clients marquee ---------- */
+const clients=['Global Health Exhibition','Ray-Ban','BMW','Chanel','Philips','THA','Jockey Club of Saudi Arabia','VOSS','Ministry of Sport','Layali Diriyah','Ability','Saudi Esports Federation','Pioneer Events','Wafy','Koshk','Magrabi','tph','Matchroom','LEAP','APH','Black Hat','Talent Blueprint','Soundstorm','MDLBeast','InFlavour','TRANS','Ministry of Culture','Wayshion','In Black Events','Capital Bank'];
+$('#marquee').innerHTML=[...clients,...clients].map(c=>`<span>${c}</span>`).join('');
+
+/* ---------- seal: drag to spin, idle rotate ---------- */
+const seal=$('#seal'),simg=seal.querySelector('img');let ang=0,vel=reduce?0:.08,drag=false,la=0;
+function angleOf(e){const r=seal.getBoundingClientRect();return Math.atan2(e.clientY-(r.top+r.height/2),e.clientX-(r.left+r.width/2))*180/Math.PI}
+seal.addEventListener('pointerdown',e=>{drag=true;la=angleOf(e);seal.setPointerCapture(e.pointerId);seal.style.cursor='grabbing'});
+seal.addEventListener('pointermove',e=>{if(!drag)return;const a=angleOf(e);let d=a-la;if(d>180)d-=360;if(d<-180)d+=360;ang+=d;vel=d;la=a});
+seal.addEventListener('pointerup',()=>{drag=false;seal.style.cursor='grab'});
+(function spin(){if(!drag){ang+=vel;vel+= ((reduce?0:.08)-vel)*.02}simg.style.transform=`rotate(${ang}deg)`;requestAnimationFrame(spin)})();
+
+/* ---------- form ---------- */
+$('#form').addEventListener('submit',e=>{e.preventDefault();const f=e.target;let ok=true;
+  const n=f.name.value.trim(),c=f.contact.value.trim();
+  $('#e-name').textContent=n?'':'Add your name so we know who to reply to.';
+  $('#e-mail').textContent=c?'':'Add an email address or phone number so we can reach you.';
+  if(!n||!c){(n?f.contact:f.name).focus();return}
+  const txt=`Hello The Seventh Cloud,\n\nMy name is ${n} and I’d like to plan a ${f.type.value} in ${f.country.value}.\n${f.date.value?'Preferred date: '+f.date.value+'\n':''}${f.guests.value?'Expected guests: '+f.guests.value+'\n':''}${f.msg.value.trim()?'\n'+f.msg.value.trim()+'\n':''}\nYou can reach me at ${c}.\n\nThank you`;
+  $('#outText').textContent=txt;$('#out').hidden=false;$('#out').scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'})});
+$('#copyOut').onclick=()=>copy($('#outText').textContent);
+
+/* ---------- navigation helper (curtain when motion is on) ---------- */
+function goTo(id){if(window.__travel)return window.__travel(id);const t=document.getElementById(id);t&&t.scrollIntoView({behavior:reduce?'auto':'smooth'})}
+
+/* ---------- continuous colour wash between sections ---------- */
+const BG=[['#hero','#CCDDED'],['.intro','#EECAD4'],['#about','#CCDDED'],['#regions','#F6E4E9'],['#ascent','#CCDDED'],['.name','#EECAD4'],['#pillars','#E3ECF6'],['#reality','#F8F5E6'],['#services','#F8F5E6'],['#process','#EECAD4'],['#reel','#CCDDED'],['#work','#CCDDED'],['#clients','#C1A892'],['.why','#E3ECF6'],['#team','#EECAD4'],['#heartcut','#CCDDED'],['#planner','#F8F5E6'],['#contact','#F8F5E6'],['.finale','#CCDDED']]
+  .map(([s,c])=>({el:document.querySelector(s),c:c.match(/\w\w/g).map(h=>parseInt(h,16))})).filter(x=>x.el);
+const sky=$('#skybg');
+const mix=(a,b,t)=>`rgb(${a.map((v,i)=>Math.round(v+(b[i]-v)*t)).join(',')})`;
+let bgTick=false;
+function blendBg(){bgTick=false;const mid=innerHeight*.55,zone=innerHeight*.45;const tops=BG.map(s=>s.el.getBoundingClientRect().top);
+  let k=0;for(let i=0;i<BG.length;i++)if(tops[i]<=mid)k=i;
+  let col;const nb=tops[k+1];
+  if(BG[k+1]&&nb-mid<zone)col=mix(BG[k].c,BG[k+1].c,.5*(1-(nb-mid)/zone));
+  else if(BG[k-1]&&mid-tops[k]<zone)col=mix(BG[k-1].c,BG[k].c,.5+.5*(mid-tops[k])/zone);
+  else col=mix(BG[k].c,BG[k].c,0);
+  sky.style.background=col}
+addEventListener('scroll',()=>{if(!bgTick){bgTick=true;requestAnimationFrame(blendBg)}},{passive:true});
+addEventListener('resize',blendBg);blendBg();
+
+/* ---------- regions map ---------- */
+const PH={'Jordan':['+962 79 069 7080','+962790697080'],'UAE':['+971 54 455 1313','+971544551313'],'Saudi Arabia':['+966 56 688 8450','+966566888450']};
+const regionOf=w=>w.l==='Jordan'?'Jordan':'Saudi Arabia';
+const RTXT={'Saudi Arabia':'Championships, festivals, fan zones and conferences in Riyadh, Jeddah and Taif, plus Saudi Culture Week in Shanghai.',
+  'Jordan':'Fan zones, national celebrations, production and full operations for Capital Bank.',
+  'UAE':'Our precise execution is inspired by Dubai. Tell us about your occasion in the Emirates.',
+  'Lebanon':'Our creative depth is inspired by Lebanon. Tell us about your occasion there.'};
+const rp=$('#rpanel');
+function showRegion(r){$$('.spot').forEach(s=>s.setAttribute('aria-pressed',s.dataset.r===r));
+  const list=W_.map((w,i)=>({w,i})).filter(x=>regionOf(x.w)===r);
+  rp.innerHTML=`<div class="swap" style="display:flex;flex-direction:column;gap:14px">
+    <span class="eyebrow" style="color:var(--rose-ink)">${list.length?'Delivered here':'We operate here'}</span>
+    <h3>${r}</h3><p>${RTXT[r]}</p>
+    ${list.length?`<p class="count">${list.length} projects in our catalog</p><ul>${list.map(x=>`<li><button data-open="${x.i}">${x.w.t}<small>${x.w.l}</small></button></li>`).join('')}</ul>`:''}
+    <div class="line" style="border:0"><div><small>${PH[r]?'Call us':'Email us'}</small><b>${PH[r]?PH[r][0]:'ibrahim@theseventhcloud.com'}</b></div><button class="copy" data-copy="${PH[r]?PH[r][1]:'ibrahim@theseventhcloud.com'}">Copy</button></div>
+    ${list.length?'':`<button class="btn btn--solid" data-plan="${r}" style="align-self:flex-start">Plan an event in ${r}</button>`}</div>`}
+$('#map').addEventListener('click',e=>{const s=e.target.closest('.spot');if(s)showRegion(s.dataset.r)});
+rp.addEventListener('click',e=>{const o=e.target.closest('[data-open]');if(o)openLb(+o.dataset.open);const p=e.target.closest('[data-plan]');if(p){setP('country',p.dataset.plan);goTo('planner')}});
+showRegion('Saudi Arabia');
+
+/* ---------- event planner ---------- */
+const OCC=['Wedding','Corporate Gala','Product Launch','Conference','Sporting Event','Public Activation'];
+const CTRY=['Jordan','Lebanon','Saudi Arabia','UAE'];
+const MOODS=[{n:'Sky',g:'linear-gradient(160deg,#CCDDED,#F8F5E6)',c:'#4D6582'},{n:'Blush',g:'linear-gradient(160deg,#EECAD4,#F8F5E6)',c:'#7A4E55'},{n:'Twilight',g:'linear-gradient(160deg,#CCDDED,#EECAD4)',c:'#4D6582'},{n:'Ivory',g:'linear-gradient(160deg,#F8F5E6,#C1A892)',c:'#3B4A5E'}];
+const SVC=['Concept Development','Scenography & Spatial Design','Lighting & Sound','Entertainment Acts','Photography','Branding & Activations','Hosts & VIP Protocol','Crowd & Traffic Management','Full Operation'];
+const P={occ:'Wedding',country:'Jordan',mood:'Blush',svc:new Set(['Concept Development','Scenography & Spatial Design','Full Operation']),g:250};
+function chips(box,items,key,multi){box.innerHTML=items.map(x=>`<button class="opt" type="button" data-v="${x}">${x}</button>`).join('');
+  box.addEventListener('click',e=>{const b=e.target.closest('.opt');if(!b)return;const v=b.dataset.v;if(multi){P.svc.has(v)?P.svc.delete(v):P.svc.add(v)}else P[key]=v;renderP()})}
+chips($('#pOcc'),OCC,'occ');chips($('#pCountry'),CTRY,'country');chips($('#pSvc'),SVC,'svc',true);
+$('#pMood').innerHTML=MOODS.map(m=>`<button class="mood" type="button" data-v="${m.n}" style="--g:${m.g}"><i></i><span>${m.n}</span></button>`).join('');
+$('#pMood').addEventListener('click',e=>{const b=e.target.closest('.mood');if(b){P.mood=b.dataset.v;renderP()}});
+function setP(k,v){P[k]=v;renderP()}
+const rng=$('#pGuests');
+function guests(v){let g=20*Math.pow(1000,v/100);const s=g<100?5:g<1000?10:g<10000?50:100;return Math.round(g/s)*s}
+rng.addEventListener('input',()=>{P.g=guests(+rng.value);renderP()});
+const scaleOf=g=>g<=80?['Intimate',1]:g<=400?['Signature',2]:g<=2500?['Grand',3]:['Landmark',4];
+let spin=0;
+function renderP(){
+  $$('#pOcc .opt').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===P.occ));
+  $$('#pCountry .opt').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===P.country));
+  $$('#pSvc .opt').forEach(b=>b.setAttribute('aria-pressed',P.svc.has(b.dataset.v)));
+  $$('#pMood .mood').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===P.mood));
+  const m=MOODS.find(x=>x.n===P.mood),[sc,lv]=scaleOf(P.g),gs=P.g.toLocaleString('en-US');
+  rng.style.setProperty('--p',rng.value+'%');$('#pGuestsOut').textContent=gs;$('#pSvcOut').textContent=P.svc.size+' selected';
+  const pv=$('#pv');pv.style.setProperty('--pvg',m.g);pv.style.setProperty('--pvc',m.c);
+  const art=/^[AEIOU]/.test(P.occ)?'An':'A';
+  $('#pvTitle').textContent=`${art} ${P.occ} in ${P.country}`;$('#pvGuests').textContent=gs;$('#pvScale').textContent=sc;$('#pvMood').textContent=m.n;
+  $$('#pvMeter i').forEach((i,j)=>i.classList.toggle('on',j<lv));
+  $('#pvList').innerHTML=P.svc.size?[...P.svc].map(s=>`<li>${s}</li>`).join(''):'<li>Choose the services you need</li>';
+  spin+=40;$('#pvSeal').style.transform=`rotate(${spin}deg)`}
+rng.value=Math.round(100*Math.log(250/20)/Math.log(1000));renderP();
+$('#pvSend').onclick=()=>{const f=$('#form');
+  const map={'Wedding':'Wedding','Corporate Gala':'Corporate Event','Product Launch':'Product Launch','Conference':'Conference or Exhibition','Sporting Event':'Large-Scale Production','Public Activation':'Large-Scale Production'};
+  f.type.value=map[P.occ];f.country.value=P.country;f.guests.value=P.g;
+  f.msg.value=`${$('#pvTitle').textContent} for about ${P.g.toLocaleString('en-US')} guests.\nMood: ${P.mood}.\nServices: ${[...P.svc].join(', ')||'to be discussed'}.`;
+  goTo('contact');setTimeout(()=>{f.name.focus({preventScroll:true});say('Brief added to the form. Add your name and contact.')},1300)};
+
+/* ---------- sparkle trail ---------- */
+if(!reduce&&matchMedia('(hover:hover) and (pointer:fine)').matches){
+  const tc=$('#trail'),tx=tc.getContext('2d');let sp=[],run=false;
+  const fit=()=>{const d=Math.min(devicePixelRatio||1,2);tc.width=innerWidth*d;tc.height=innerHeight*d;tx.setTransform(d,0,0,d,0,0)};fit();addEventListener('resize',fit);
+  const cols=['123,147,172','185,141,142','193,168,146','255,255,255'];
+  addEventListener('pointermove',e=>{for(let i=0;i<2;i++)sp.push({x:e.clientX,y:e.clientY,vx:(Math.random()-.5)*1.2,vy:(Math.random()-.5)*1.2-.4,r:Math.random()*2.4+.8,l:1,c:cols[(Math.random()*cols.length)|0]});if(sp.length>140)sp.splice(0,sp.length-140);if(!run){run=true;requestAnimationFrame(tick)}});
+  function star(x,y,r){tx.beginPath();for(let i=0;i<4;i++){const a=i*Math.PI/2;tx.lineTo(x+Math.cos(a)*r*2.2,y+Math.sin(a)*r*2.2);tx.lineTo(x+Math.cos(a+Math.PI/4)*r*.55,y+Math.sin(a+Math.PI/4)*r*.55)}tx.closePath();tx.fill()}
+  function tick(){tx.clearRect(0,0,innerWidth,innerHeight);sp=sp.filter(p=>(p.l-=.022)>0);
+    for(const p of sp){p.x+=p.vx;p.y+=p.vy;tx.fillStyle=`rgba(${p.c},${p.l*.85})`;star(p.x,p.y,p.r*p.l)}
+    if(sp.length)requestAnimationFrame(tick);else{run=false;tx.clearRect(0,0,innerWidth,innerHeight)}}
+}
+
+/* ---------- tilt + magnetic buttons ---------- */
+if(!reduce&&matchMedia('(hover:hover) and (pointer:fine)').matches){
+  const tilt=(el,max)=>{el.style.transition='transform .5s cubic-bezier(.22,.7,.2,1)';el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform=`perspective(800px) rotateY(${x*max}deg) rotateX(${-y*max}deg)`});el.addEventListener('pointerleave',()=>el.style.transform='')};
+  $$('.card__media').forEach(el=>tilt(el,10));tilt($('#pv'),8);$$('.rpanel,.map').forEach(el=>tilt(el,4));
+  $$('.btn').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.translate=`${(e.clientX-r.left-r.width/2)*.18}px ${(e.clientY-r.top-r.height/2)*.25}px`});b.addEventListener('pointerleave',()=>b.style.translate='')});
+}
+
+/* ---------- GSAP motion ---------- */
+const curtain=$('#curtain');
+const motion=!reduce&&window.gsap&&window.ScrollTrigger;
+if(!motion){document.documentElement.classList.remove('motion');curtain.hidden=true}
+if(motion){
+  gsap.registerPlugin(ScrollTrigger);
+  setTimeout(()=>{if(curtain.classList.contains('live')&&!curtain.dataset.nav){curtain.hidden=true}},6000);
+
+  /* --- opening curtain --- */
+  const ct=$('.curtain__top'),cb=$('.curtain__bot'),mark=$('.curtain__mark'),seal_=$('.curtain__mark .s'),wm=$('.curtain__mark .w'),lbl=$('.curtain__mark .lbl'),kk=$('.curtain__mark .k');
+  const intro=gsap.timeline({onComplete:()=>{curtain.hidden=true;curtain.classList.remove('live')}});
+  intro.from(seal_,{rotate:-140,scale:.5,opacity:0,duration:1.1,ease:'power3.out'})
+       .from(wm,{y:20,opacity:0,duration:.8,ease:'power3.out'},'-=.55')
+       .to(mark,{scale:1.08,opacity:0,duration:.45,ease:'power2.in'},'+=.35')
+       .to(ct,{yPercent:-102,duration:1.1,ease:'power4.inOut'},'-=.15')
+       .to(cb,{yPercent:102,duration:1.1,ease:'power4.inOut'},'<')
+       .to('#skip',{opacity:0,duration:.3},'<');
+  $('#skip').onclick=()=>intro.progress(1);
+
+  /* --- section-change curtain for every in-page link --- */
+  const names={top:'The Seventh Cloud',about:'Who We Are',services:'Our Services',process:'Our Process',work:'Selected Works',team:'Meet The Team',planner:'Design Your Event',regions:'Where We Work',contact:'Contact Us'};
+  let busy=false;
+  function travel(id){
+    const target=document.getElementById(id);if(!target||busy)return;busy=true;
+    curtain.hidden=false;curtain.dataset.nav='1';curtain.classList.add('live');
+    seal_.style.display='none';wm.style.display='none';lbl.hidden=false;kk.hidden=false;lbl.textContent=names[id]||'';$('#skip').style.display='none';
+    gsap.set(mark,{opacity:0,scale:1});
+    gsap.timeline({onComplete:()=>{curtain.hidden=true;curtain.classList.remove('live');busy=false}})
+      .fromTo(ct,{yPercent:-102},{yPercent:0,duration:.6,ease:'power3.in'})
+      .fromTo(cb,{yPercent:102},{yPercent:0,duration:.6,ease:'power3.in'},'<')
+      .fromTo(mark,{opacity:0,y:20},{opacity:1,y:0,duration:.4,ease:'power2.out'},'-=.1')
+      .add(()=>{const y=id==='top'?0:target.getBoundingClientRect().top+scrollY-(id==='contact'?0:10);document.documentElement.style.scrollBehavior='auto';scrollTo(0,y);ScrollTrigger.update();requestAnimationFrame(()=>document.documentElement.style.scrollBehavior='')})
+      .to(mark,{opacity:0,y:-16,duration:.35,ease:'power2.in'},'+=.35')
+      .to(ct,{yPercent:-102,duration:.8,ease:'power4.inOut'},'-=.1')
+      .to(cb,{yPercent:102,duration:.8,ease:'power4.inOut'},'<');
+  }
+  document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const id=a.getAttribute('href').slice(1);if(!id||!document.getElementById(id))return;e.preventDefault();travel(id)});
+
+  window.__travel=travel;
+
+  /* --- scene 1: ascent through seven clouds --- */
+  const layers=$$('.ascent .layer').reverse(); // nearest first
+  const num=$('#ascNum'),bars=$$('#ascBar i');num.textContent='1';bars.forEach((b,i)=>b.classList.toggle('on',i===0));
+  const asc=gsap.timeline({scrollTrigger:{trigger:'#ascent',start:'top top',end:'+=230%',pin:true,scrub:1,anticipatePin:1,
+    onUpdate:s=>{const n=Math.min(7,1+Math.floor(s.progress*7.2));if(num.textContent!=n){num.textContent=n;bars.forEach((b,i)=>b.classList.toggle('on',i<n));gsap.fromTo(num,{scale:1.12},{scale:1,duration:.4,ease:'power2.out'})}}}});
+  layers.forEach((l,i)=>asc.to(l,{scale:4.2,opacity:0,yPercent:i%2?-8:8,ease:'power1.in',duration:1.1},i*.5));
+  asc.to('.ascent__glow',{opacity:1,duration:layers.length*.5+.6,ease:'none'},0)
+     .to('.ascent .cut__stage',{backgroundPosition:'0 100%',duration:layers.length*.5,ease:'none'},0)
+     .fromTo('#ascLine',{y:30,opacity:.2},{y:0,opacity:1,duration:.8},layers.length*.5-.2);
+
+  /* --- scene 2: concept to reality --- */
+  const words=$$('#realWords span');words.forEach(w=>w.classList.remove('on'));
+  const real=gsap.timeline({scrollTrigger:{trigger:'#reality',start:'top top',end:'+=200%',pin:true,scrub:1,anticipatePin:1,
+    onUpdate:s=>words.forEach((w,i)=>w.classList.toggle('on',s.progress>=i*.22+.02))}});
+  real.fromTo('#realFrame',{clipPath:'inset(30% 34% 30% 34% round 22px)'},{clipPath:'inset(0% 0% 0% 0% round 0px)',duration:3,ease:'power2.inOut'},0)
+      .fromTo('#realFrame img',{scale:1.35},{scale:1,duration:3,ease:'power2.out'},0)
+      .to('#realTitle',{color:'#FFFFFF',y:20,duration:1},1.6)
+      .to('#realWords span',{color:'#FFFFFF',duration:1},1.6);
+
+  /* --- scene 3: horizontal reel --- */
+  const track=$('#reelTrack');
+  const dist=()=>Math.max(0,track.scrollWidth-innerWidth);
+  const reelTl=gsap.timeline({scrollTrigger:{trigger:'#reel',start:'top top',end:()=>'+='+(dist()+innerHeight*.4),pin:true,scrub:1,anticipatePin:1,invalidateOnRefresh:true}});
+  reelTl.to(track,{x:()=>-dist(),ease:'none',duration:1},0)
+        .to('#reelGhost',{xPercent:-30,ease:'none',duration:1},0)
+        .to('.reel__item img',{xPercent:-8,ease:'none',duration:1},0);
+
+  /* --- scene 4: into the heart --- */
+  gsap.timeline({scrollTrigger:{trigger:'#heartcut',start:'top top',end:'+=190%',pin:true,scrub:1,anticipatePin:1}})
+    .to('#heartImg',{scale:7,yPercent:10,duration:2,ease:'power2.in'},0)
+    .to('#heartTxt',{y:-60,opacity:0,duration:.7},.3)
+    .to('#heartWash',{opacity:1,duration:.7},1.4)
+    .fromTo('#heartEnd',{opacity:0,scale:.92},{opacity:1,scale:1,duration:.6},1.8);
+
+  const tl=gsap.timeline({defaults:{ease:'power3.out'},delay:2.3});
+  tl.from('.hero__mark',{y:30,scale:.96,filter:'blur(6px)',duration:1.3})
+    .from('.hero__rule',{scaleX:0,duration:1.1},'-=.8')
+    .from('.reveal-hero:not(.hero__mark):not(.hero__rule)',{y:18,duration:.8,stagger:.1},'-=.7')
+    .from('.cloud--a',{yPercent:30,duration:2,ease:'power2.out'},0)
+    .from('.cloud--b',{yPercent:40,duration:2.4,ease:'power2.out'},0);
+  gsap.to('.hero .cloud--a',{xPercent:-3,yPercent:-12,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.to('.hero .cloud--b',{xPercent:3,yPercent:-6,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.to('.hero__in',{yPercent:18,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.utils.toArray('.reveal').forEach(el=>{gsap.from(el,{y:40,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 92%',once:true}})});
+  gsap.utils.toArray('.who__photos figure').forEach((f,i)=>{gsap.to(f,{yPercent:i%2?-10:8,ease:'none',scrollTrigger:{trigger:'.who',start:'top bottom',end:'bottom top',scrub:true}})});
+  gsap.from('.card',{y:30,scale:.97,duration:.6,stagger:{each:.05,grid:'auto'},ease:'back.out(1.4)',scrollTrigger:{trigger:'#grid',start:'top 88%',once:true}});
+  gsap.to('.finale .cloud',{yPercent:-14,ease:'none',scrollTrigger:{trigger:'.finale',start:'top bottom',end:'bottom bottom',scrub:true}});
+  /* count-up */
+  $$('.stat b').forEach(b=>{const end=+b.dataset.count,o={v:b.dataset.plain?end-25:0};ScrollTrigger.create({trigger:b,start:'top 90%',once:true,onEnter:()=>gsap.to(o,{v:end,duration:1.6,ease:'power2.out',onUpdate:()=>b.textContent=Math.round(o.v)})})});
+  ScrollTrigger.sort();ScrollTrigger.refresh();
+  addEventListener('load',()=>ScrollTrigger.refresh());
+}
+})();
+</script>
+
+</body>
+</html>
